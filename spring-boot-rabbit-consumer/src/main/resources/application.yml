@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: spring-rabbit-c
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    host: 127.0.0.1
+  rabbitmq2:
+    addresses: 127.0.0.1:5672
+    username: guest
+    password: guest
+    virtual-host: /
+passportConsumer:
+  exchangeName: direct.exchange.test
+  exchangeType: direct
+  routingKey: orig_1
+  queueName: direct.queue.test
+passportConsumer3:
+  exchangeName: direct.exchange.test
+  exchangeType: direct
+  routingKey: orig_1
+  queueName: direct.queue.test3
+server:
+  port: 8081

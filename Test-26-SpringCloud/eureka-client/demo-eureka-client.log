@@ -1,0 +1,63 @@
+2017-08-13 17:21:33.280  INFO 2452 --- [main] com.didispace.Application                : No active profile set, falling back to default profiles: default
+2017-08-13 17:21:33.318  INFO 2452 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39de3d36: startup date [Sun Aug 13 17:21:33 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1e802ef9
+2017-08-13 17:21:34.840  INFO 2452 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d09a8d99-da76-33c2-8f5e-621f5ca2ca52
+2017-08-13 17:21:34.887  INFO 2452 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-08-13 17:21:35.048  INFO 2452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a8f97bbb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-13 17:21:35.803  INFO 2452 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 2001 (http)
+2017-08-13 17:21:35.821  INFO 2452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-13 17:21:35.830  INFO 2452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-13 17:21:36.100  INFO 2452 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-13 17:21:36.101  INFO 2452 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2783 ms
+2017-08-13 17:21:36.291  INFO 2452 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-13 17:21:36.296  INFO 2452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-13 17:21:36.297  INFO 2452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-13 17:21:36.298  INFO 2452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-13 17:21:36.298  INFO 2452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-13 17:21:37.557  INFO 2452 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2017-08-13 17:21:38.229  INFO 2452 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39de3d36: startup date [Sun Aug 13 17:21:33 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1e802ef9
+2017-08-13 17:21:38.395  INFO 2452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dc],methods=[GET]}" onto public java.lang.String com.didispace.DcController.dc()
+2017-08-13 17:21:38.399  INFO 2452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-13 17:21:38.399  INFO 2452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-13 17:21:38.452  INFO 2452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-13 17:21:38.452  INFO 2452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-13 17:21:38.515  INFO 2452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-13 17:21:39.225  WARN 2452 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2017-08-13 17:21:39.226  INFO 2452 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-08-13 17:21:39.251  WARN 2452 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2017-08-13 17:21:39.252  INFO 2452 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-08-13 17:21:39.384  INFO 2452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-13 17:21:39.393  INFO 2452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2017-08-13 17:21:39.395  INFO 2452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2017-08-13 17:21:39.399  INFO 2452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2017-08-13 17:21:39.401  INFO 2452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2017-08-13 17:21:39.417  INFO 2452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2017-08-13 17:21:39.430  INFO 2452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=39de3d36,type=ConfigurationPropertiesRebinder]
+2017-08-13 17:21:39.680  INFO 2452 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-08-13 17:21:39.702  INFO 2452 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2017-08-13 17:21:39.783  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2017-08-13 17:21:41.127  INFO 2452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2017-08-13 17:21:41.127  INFO 2452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2017-08-13 17:21:41.499  INFO 2452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2017-08-13 17:21:41.500  INFO 2452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2017-08-13 17:21:42.101  INFO 2452 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2017-08-13 17:21:42.292  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2017-08-13 17:21:42.293  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2017-08-13 17:21:42.293  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2017-08-13 17:21:42.293  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2017-08-13 17:21:42.293  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2017-08-13 17:21:42.293  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2017-08-13 17:21:42.293  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2017-08-13 17:21:42.852  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2017-08-13 17:21:42.854  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2017-08-13 17:21:42.856  INFO 2452 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2017-08-13 17:21:42.859  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1502616102859 with initial instances count: 2
+2017-08-13 17:21:42.918  INFO 2452 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application demo-eureka-client with eureka with status UP
+2017-08-13 17:21:42.921  INFO 2452 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1502616102921, current=UP, previous=STARTING]
+2017-08-13 17:21:42.923  INFO 2452 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEMO-EUREKA-CLIENT/localhost:demo-eureka-client:2001: registering service...
+2017-08-13 17:21:43.031  INFO 2452 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEMO-EUREKA-CLIENT/localhost:demo-eureka-client:2001 - registration status: 204
+2017-08-13 17:21:43.088  INFO 2452 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 2001 (http)
+2017-08-13 17:21:43.089  INFO 2452 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 2001
+2017-08-13 17:21:43.093  INFO 2452 --- [main] com.didispace.Application                : Started Application in 15.412 seconds (JVM running for 16.296)
+2017-08-13 17:22:42.597  INFO 2452 --- [http-nio-2001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-13 17:22:42.598  INFO 2452 --- [http-nio-2001-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-13 17:22:42.622  INFO 2452 --- [http-nio-2001-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
