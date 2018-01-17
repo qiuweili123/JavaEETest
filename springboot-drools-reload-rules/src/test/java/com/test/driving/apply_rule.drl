@@ -1,0 +1,20 @@
+package com.test.driving;
+dialect  "mvel"
+
+
+rule "apply rule"
+ when
+   $applicant:Applicant(age>=18);
+ then
+  $applicant.setValid(true);
+ System.out.println("rule  age super 18");
+ end
+
+
+rule "apply rule age less then 18"
+ when
+   applicant:Applicant(age<18);
+ then
+  applicant.setValid(false);
+ System.out.println("rule  less 18");
+ end
