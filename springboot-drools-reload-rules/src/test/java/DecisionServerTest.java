@@ -1,3 +1,5 @@
+import com.drools.test.bean.ClassRoom;
+import com.drools.test.bean.Student;
 import com.test.driving.Applicant;
 import com.test.driving.Recipe;
 import org.kie.api.KieServices;
@@ -35,7 +37,8 @@ public class DecisionServerTest {
         // listContaners();
         //disposeAndCreateContainer();
         // executeCommands();
-        executeCommandWithResult();
+        // executeCommandWithResult();
+        testForm();
         //getRelaseId();
         // getDMNclient();
     }
@@ -136,8 +139,6 @@ public class DecisionServerTest {
 
 // 匹配规则
         commands.add(cmdFactory.newFireAllRules());
-
-
         ServiceResponse<org.kie.api.runtime.ExecutionResults> response = rules.executeCommandsWithResults("driving_1.0.0", cmdFactory.newBatchExecution(commands));  // applySession第一个参数，容器名称，第二个参数为回话标示，可以不填, 默认为defaultKieSession"
 
         System.out.println(response.getMsg());
@@ -157,6 +158,31 @@ public class DecisionServerTest {
         DMNServicesClient client = kieServicesClient.getServicesClient(DMNServicesClient.class);
         ServiceResponse<DMNModelInfoList> models = client.getModels("user");
         System.out.println(models.getResult());
+    }
+
+    public static void testForm() {
+        ClassRoom room = new ClassRoom();
+        Student s = new Student();
+        s.setId(1L);
+        s.setName("zhangsan");
+        Student s1 = new Student();
+        s1.setId(2L);
+        s1.setName("list");
+        RuleServicesClient rules = kieServicesClient.getServicesClient(RuleServicesClient.class);
+
+        KieCommands cmdFactory = KieServices.Factory.get().getCommands();
+
+        List<Command<?>> commands = new LinkedList<Command<?>>();
+        //当申请人实例插入到引擎中时，将根据规则的约束进行评估,可以理解参数传递
+        commands.add(cmdFactory.newInsert(room, "room"));
+        //多个实例必须生成不同的实例名称 applicant1
+    /*    applicant.setAge(57);
+        commands.add(cmdFactory.newInsert(applicant, "applicant1"));*/
+
+// 匹配规则
+        commands.add(cmdFactory.newFireAllRules());
+        ServiceResponse<org.kie.api.runtime.ExecutionResults> response = rules.executeCommandsWithResults("demo-rule_1.0.0", cmdFactory.newBatchExecution(commands));  // applySession第一个参数，容器名称，第二个参数为回话标示，可以不填, 默认为defaultKieSession"
+        System.out.println(response);
     }
 
 
