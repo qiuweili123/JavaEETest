@@ -10,6 +10,7 @@
     <modules>
         <module>drools-redis-bean</module>
         <module>drools-rule</module>
+        <module>drools-rest-client</module>
     </modules>
     <packaging>pom</packaging>
     <distributionManagement>
