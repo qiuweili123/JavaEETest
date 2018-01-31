@@ -1,0 +1,19 @@
+package com.thc.rules;
+import java.util.List;
+import com.thc.bean.User;
+dialect  "mvel"
+/**
+全局变量不能使用在规则条件中，全局变量更多的会用来存放规则结果，作为应用程序和规则之间的交互桥梁
+以下程序中直接接收处理结果即可。
+*/
+global String userName;
+global List users;
+rule "Global"
+
+    when
+   $u:User(age<17)
+    then
+    userName=$u.getName();
+    System.out.println("userName::"+userName);
+    users.add($u);
+end

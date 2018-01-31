@@ -1,0 +1,11 @@
+package com.thc.rules;
+import com.thc.bean.User;
+dialect  "mvel"
+/**
+在使用规则引擎时，会将全部的事实数据放到Working Memory中，如果将Working Memory看作是一个事实数据库的话，则查询（query）就可以被看作是访问这些数据的一个简单途径。
+在query中，主要是设定查询条件，因此，query的语法就像规则中的LHS（条件）语法，仅仅设定查询的条件，至于查询出来的结果如何处理.。
+以下代码返回17到25岁的人数据
+*/
+query "betwen 17 and 25"(int minAge,int maxAge)
+  $u:User(age>minAge,age<maxAge);
+end

@@ -1,0 +1,10 @@
+package com.thc.rules;
+import com.thc.bean.User
+import com.thc.util.RedisUtil;
+dialect  "mvel"
+/**
+自定义的元数据可以被理解为类型的描述信息。
+对规则引擎的工作并不会产生影响，除了可以使用在规则文件中定义的函数外，还可以在规则或者在函数中使用Java类的静态方法。
+在规则文件中定义不需要有rule的关键字
+*/
+
