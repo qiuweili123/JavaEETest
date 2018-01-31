@@ -799,6 +799,7 @@ public class RedisUtil {
     public String lset(String key, Long index, String value) {
         Jedis jedis = null;
         String res = null;
+
         try {
             jedis = pool.getResource();
             res = jedis.lset(key, index, value);
