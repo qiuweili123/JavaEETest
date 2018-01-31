@@ -177,8 +177,10 @@ public class DecisionServerTest {
         commands.add(cmdFactory.newInsert(room, "room"));
         //多个实例必须生成不同的实例名称 applicant1
     /*    applicant.setAge(57);
-        commands.add(cmdFactory.newInsert(applicant, "applicant1"));*/
-
+      /*  commands.add(cmdFactory.newInsert(applicant, "applicant1"));*//*
+        QueryCommand queryCommand = new QueryCommand();
+        queryCommand.setName("person");
+        commands.add(queryCommand);*/
 // 匹配规则
         commands.add(cmdFactory.newFireAllRules());
         ServiceResponse<org.kie.api.runtime.ExecutionResults> response = rules.executeCommandsWithResults("demo-rule_1.0.0", cmdFactory.newBatchExecution(commands));  // applySession第一个参数，容器名称，第二个参数为回话标示，可以不填, 默认为defaultKieSession"
