@@ -15,7 +15,7 @@ public class UserController {
 
     @GetMapping("/getById")
     public Object getById(long id) {
-        System.out.println("id==" + (id % 2));
+        System.out.println("id=eeee22222===222222=" + (id % 2));
         if ((id % 2) == 0) {
             return userInfoMapper.selectByEvenUserId(id);
         } else {
