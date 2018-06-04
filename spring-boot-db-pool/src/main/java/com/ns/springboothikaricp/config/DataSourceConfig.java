@@ -27,7 +27,7 @@ public class DataSourceConfig {
 
     private HikariConfig test1;
 
-   // private HikariConfig test2;
+    // private HikariConfig test2;
 
     public HikariConfig getTest1() {
         return test1;
@@ -57,7 +57,7 @@ public class DataSourceConfig {
 */
 
     //以SpringBootAppliacation启动的时候可以用两个dataSource，但是用tomcat容器启动无法启动成功
-   //@Bean("test1")
+    //@Bean("test1")
   /* public HikariDataSource hikariDataSource() {
 
         return new HikariDataSource(hikariConfig());
@@ -76,19 +76,19 @@ public class DataSourceConfig {
         System.out.println("-----init----");
         //按照目标数据源名称和目标数据源对象的映射存放在Map中
         Map<Object, Object> targetDataSources = new HashMap<>();
-        HikariDataSource hikariDataSource=new HikariDataSource(test1);
+        HikariDataSource hikariDataSource = new HikariDataSource(test1);
         /*targetDataSources.put("test1",hikariDataSource());
         targetDataSources.put("test2", hikariDataSource2());*/
-        targetDataSources.put("test1",hikariDataSource);
+        targetDataSources.put("test1", hikariDataSource);
         //采用是想AbstractRoutingDataSource的对象包装多数据源
         DynamicDataSource dataSource = new DynamicDataSource();
         dataSource.setTargetDataSources(targetDataSources);
         //设置默认的数据源，当拿不到数据源时，使用此配置
-      dataSource.setDefaultTargetDataSource(hikariDataSource);
+        dataSource.setDefaultTargetDataSource(hikariDataSource);
         return dataSource;
     }
 
-  @Bean
+    @Bean
     public PlatformTransactionManager txManager() {
         return new DataSourceTransactionManager(dataSource());
     }

@@ -23,7 +23,7 @@ public class ApplicationTests {
         for (int i = 1; i <= 2; i++) {
             //i为奇数时调用selectByOddUserId方法获取，i为偶数时调用selectByEvenUserId方法获取
             userInfo = i % 2 == 1 ? userInfoMapper.selectByOddUserId(new Long(i)) : userInfoMapper.selectByEvenUserId(new Long(i));
-            System.out.println("##"+userInfo.getUserName());
+            System.out.println("##" + userInfo.getUserName());
 
         }
     }
