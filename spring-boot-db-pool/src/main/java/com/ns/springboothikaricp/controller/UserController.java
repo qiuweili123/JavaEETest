@@ -1,6 +1,7 @@
 package com.ns.springboothikaricp.controller;
 
 import com.ns.springboothikaricp.bean.User;
+import com.ns.springboothikaricp.constants.PathConstants;
 import com.ns.springboothikaricp.dao.UserInfoMapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -11,7 +12,8 @@ import javax.annotation.Resource;
 
 @Api(value = "/test", tags = "测试接口模块")
 @RestController
-@RequestMapping("/user")
+@RequestMapping(PathConstants.API+"/user")
+
 public class UserController {
     @Resource
     private UserInfoMapper userInfoMapper;

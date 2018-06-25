@@ -81,6 +81,7 @@
             <version>1.2.33</version>
         </dependency>
 
+        <!--swagger2接口-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
