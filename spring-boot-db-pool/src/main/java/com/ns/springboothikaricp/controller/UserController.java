@@ -12,14 +12,17 @@ import javax.annotation.Resource;
 
 @Api(value = "/test", tags = "测试接口模块")
 @RestController
-@RequestMapping(PathConstants.API+"/user")
+@RequestMapping(PathConstants.API + "/user")
 
 public class UserController {
     @Resource
     private UserInfoMapper userInfoMapper;
+   /* @Resource
+    private UserDao userDao;*/
 
     @GetMapping("/getById")
     public Object getById(long id) {
+        //userDao.getName();
         System.out.println("id=4444===44=" + (id % 2));
         if ((id % 2) == 0) {
             return userInfoMapper.selectByEvenUserId(id);
