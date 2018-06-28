@@ -16,4 +16,6 @@ public interface UserInfoMapper {
      */
     @TargetDataSource("test1")
     User selectByEvenUserId(Long id);
+
+    int insert(User user);
 }

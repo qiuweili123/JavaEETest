@@ -1,20 +1,26 @@
 package com.ns.springboothikaricp.bean;
 
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.Date;
 
+@ApiModel(description = "用户表信息")
 public class User {
 
+    @ApiModelProperty("主键ID")
     private Integer id;
-
+    @ApiModelProperty("用户名称")
     private String userName;
-
+    @ApiModelProperty("用户年龄")
     private Integer userAge;
-
+    @ApiModelProperty("用户地址")
     private String address;
-
+    @ApiModelProperty("创建时间")
     private Date addTime;
-
+    @ApiModelProperty("备注")
     private String remarks;
 
     public Integer getId() {

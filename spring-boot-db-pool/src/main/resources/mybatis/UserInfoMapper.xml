@@ -26,4 +26,13 @@
         from user_info
         where id = #{id,jdbcType=INTEGER}
     </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.ns.springboothikaricp.bean.User">
+    insert into user_info (user_name, user_age)
+    values
+    ( #{userName,jdbcType=VARCHAR}, #{userAge,jdbcType=INTEGER}
+    )
+  </insert>
+
+
 </mapper>
