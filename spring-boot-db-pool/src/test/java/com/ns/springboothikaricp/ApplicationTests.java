@@ -1,10 +1,12 @@
 package com.ns.springboothikaricp;
 
 import com.ns.springboothikaricp.bean.User;
+import com.ns.springboothikaricp.dao.RedisDao;
 import com.ns.springboothikaricp.dao.UserInfoMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
@@ -15,6 +17,9 @@ public class ApplicationTests {
 
     @Resource
     private UserInfoMapper userInfoMapper;
+
+    @Resource
+    private RedisDao redisDao;
 
 
     @Test
@@ -27,4 +32,13 @@ public class ApplicationTests {
 
         }
     }
+
+    @Test
+    public void  setAndIncr() throws Exception{
+        String key="stock_key_0122";
+        redisDao.set(key,1L);
+        redisDao.incr(key,10l);
+
+    }
+
 }
