@@ -16,12 +16,17 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 
-public class RedisDao {
+public abstract class RedisDao {
 
+   /* private Class<T> entityClass;
 
-    @Resource
-    private RedisTemplate redisTemplate;
+    public RedisDao(){
 
+       entityClass= GenericsUtils.getSuperClassGenricType(this.getClass());
+        System.out.println("##entityCalss=="+entityClass);
+    }
+
+*/
 
 
 
@@ -33,10 +38,11 @@ public class RedisDao {
      * @return true表示成功
      */
     public <T> void set(final String key, T value) {
-        ValueOperations<String,String> operations = redisTemplate.opsForValue();
+
+        ValueOperations<String,T> operations = getRedisTemplate().opsForValue();
 
 
-        operations.set(key,JSON.toJSONString(value));
+        operations.set(key,value);
     }
 
     /**
@@ -47,9 +53,9 @@ public class RedisDao {
      * @return true表示成功
      */
     public <T> void set(final String key, T value, Long expireTime) {
-        ValueOperations<String, String> operations = redisTemplate.opsForValue();
+        ValueOperations<String, T> operations = getRedisTemplate().opsForValue();
 
-        operations.set(key,  JSON.toJSONString(value), expireTime,TimeUnit.SECONDS);
+        operations.set(key,  value, expireTime,TimeUnit.SECONDS);
     }
     /**
      * 读取缓存
@@ -57,16 +63,17 @@ public class RedisDao {
      * @param key
      * @return
      */
-    public <T> T get(final String key,Class<T> entityClass) {
 
-        ValueOperations<String,String> operations = redisTemplate.opsForValue();
-
-       return    JSON.parseObject(operations.get(key),entityClass);
-
-    }
-    public <T> T get(final String key) {
+    /*public  T get(final String key) {
 
         ValueOperations<String,T> operations = redisTemplate.opsForValue();
+
+       return   operations.get(key);
+
+    }*/
+    public <T> T get(final String key) {
+
+        ValueOperations<String,T> operations = getRedisTemplate().opsForValue();
 
         return    operations.get(key);
 
@@ -78,7 +85,7 @@ public class RedisDao {
      * @param key
      */
     public boolean delete(final String key) {
-       return  redisTemplate.delete(key);
+       return  getRedisTemplate().delete(key);
     }
 
     /**
@@ -87,7 +94,7 @@ public class RedisDao {
      * @return
      */
     public boolean deleteBatch(final String ... keys) {
-        return  redisTemplate.delete(keys);
+        return  getRedisTemplate().delete(keys);
     }
 
 
@@ -98,7 +105,7 @@ public class RedisDao {
      * @return
      */
     public boolean exists(final String key) {
-        return redisTemplate.hasKey(key);
+        return getRedisTemplate().hasKey(key);
     }
 
 
@@ -111,7 +118,7 @@ public class RedisDao {
      */
     public long incr(final String key, long incBy) {
 
-        return redisTemplate.opsForValue().increment(key, incBy);
+        return getRedisTemplate().opsForValue().increment(key, incBy);
 
     }
 
@@ -122,7 +129,7 @@ public class RedisDao {
      * @return
      */
     public boolean expire(final String key, long expireSeconds) {
-          return   redisTemplate.expire(key, expireSeconds, TimeUnit.SECONDS);
+          return   getRedisTemplate().expire(key, expireSeconds, TimeUnit.SECONDS);
     }
 
     /**
@@ -132,10 +139,10 @@ public class RedisDao {
      * @return
      */
     public boolean expireAt(final String key, Date date) {
-        return   redisTemplate.expireAt(key,date);
+        return   getRedisTemplate().expireAt(key,date);
     }
 
 
-
+  protected abstract   RedisTemplate getRedisTemplate();
 
 }

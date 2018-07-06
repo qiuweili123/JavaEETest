@@ -3,6 +3,7 @@ package com.ns.springboothikaricp.config;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
+import com.ns.springboothikaricp.config.serializer.KryoRedisSerializer;
 import com.ns.springboothikaricp.dao.RedisDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +26,10 @@ public class RedisConfig {
       // fastJsonConfig.setSerializerFeatures(SerializerFeature.WriteClassName);
         FastJsonRedisSerializer<Object> fastJsonRedisSerializer = new FastJsonRedisSerializer<>(Object.class);
         fastJsonRedisSerializer.setFastJsonConfig(fastJsonConfig);
-       // redisTemplate.setValueSerializer(fastJsonRedisSerializer);
+        redisTemplate.setValueSerializer(fastJsonRedisSerializer);
+        KryoRedisSerializer<Object> kryoRedisSerializer=new KryoRedisSerializer<>(Object.class);
+       // redisTemplate.setValueSerializer(kryoRedisSerializer);
+
 //        redisTemplate.setHashValueSerializer(fastJsonRedisSerializer);
         // 设置键（key）的序列化采用StringRedisSerializer。
         //redisTemplate.setKeySerializer(new StringRedisSerializer());
@@ -36,11 +40,23 @@ public class RedisConfig {
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
-    @Bean
-    public RedisDao redisDao(){
+    @Bean("stringRedisTemplate")
+    public RedisTemplate<Object,Object> StringRedisTemplate(RedisConnectionFactory  connectionFactory){
 
-        return new RedisDao();
+        RedisTemplate<Object, Object> redisTemplate = new RedisTemplate<>();
+        redisTemplate.setConnectionFactory(connectionFactory);
+        redisTemplate.setValueSerializer(new StringRedisSerializer());
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+       // redisTemplate.setDefaultSerializer(new StringRedisSerializer());
+//        redisTemplate.setHashValueSerializer(fastJsonRedisSerializer);
+        // 设置键（key）的序列化采用StringRedisSerializer。
+        //redisTemplate.setKeySerializer(new StringRedisSerializer());
+
+        redisTemplate.setDefaultSerializer(new StringRedisSerializer());
+        // redisTemplate.setHashKeySerializer(new StringRedisSerializer());
+        //  redisTemplate.setDefaultSerializer(new FastJsonRedisSerializer<>(Object.class));
+        redisTemplate.afterPropertiesSet();
+        return redisTemplate;
     }
-
 
 }
