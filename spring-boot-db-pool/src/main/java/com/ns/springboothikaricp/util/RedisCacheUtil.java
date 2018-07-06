@@ -24,13 +24,13 @@ public class RedisCacheUtil<T> {
      * @param value 缓存的值
      * @return 缓存的对象
      */
-    public <T> ValueOperations<String, T> setCacheObject(String key, T value) {
+    public   ValueOperations<String, T> setCacheObject(String key, T value) {
         ValueOperations<String, T> operation = redisTemplate.opsForValue();
         operation.set(key, value);
         return operation;
     }
 
-    public <T> ValueOperations<String, T> setCacheObject(String key, T value, Integer timeout, TimeUnit timeUnit) {
+    public ValueOperations<String, T> setCacheObject(String key, T value, Integer timeout, TimeUnit timeUnit) {
         ValueOperations<String, T> operation = redisTemplate.opsForValue();
         operation.set(key, value, timeout, timeUnit);
         return operation;
@@ -42,7 +42,7 @@ public class RedisCacheUtil<T> {
      * @param key 缓存键值
      * @return 缓存键值对应的数据
      */
-    public <T> T getCacheObject(String key) {
+    public   T getCacheObject(String key) {
         ValueOperations<String, T> operation = redisTemplate.opsForValue();
         return operation.get(key);
     }
@@ -72,7 +72,7 @@ public class RedisCacheUtil<T> {
      * @param dataList 待缓存的List数据
      * @return 缓存的对象
      */
-    public <T> ListOperations<String, T> setCacheList(String key, List<T> dataList) {
+    public ListOperations<String, T> setCacheList(String key, List<T> dataList) {
         ListOperations listOperation = redisTemplate.opsForList();
         if (null != dataList) {
             int size = dataList.size();
@@ -89,7 +89,7 @@ public class RedisCacheUtil<T> {
      * @param key 缓存的键值
      * @return 缓存键值对应的数据
      */
-    public <T> List<T> getCacheList(String key) {
+    public  List<T> getCacheList(String key) {
         List<T> dataList = new ArrayList<T>();
         ListOperations<String, T> listOperation = redisTemplate.opsForList();
         Long size = listOperation.size(key);
@@ -107,7 +107,7 @@ public class RedisCacheUtil<T> {
      * @param dataSet 缓存的数据
      * @return 缓存数据的对象
      */
-    public <T> BoundSetOperations<String, T> setCacheSet(String key, Set<T> dataSet) {
+    public  BoundSetOperations<String, T> setCacheSet(String key, Set<T> dataSet) {
         BoundSetOperations<String, T> setOperation = redisTemplate.boundSetOps(key);
         Iterator<T> it = dataSet.iterator();
         while (it.hasNext()) {
@@ -139,7 +139,7 @@ public class RedisCacheUtil<T> {
      * @param dataMap
      * @return
      */
-    public <T> HashOperations<String, String, T> setCacheMap(String key, Map<String, T> dataMap) {
+    public  HashOperations<String, String, T> setCacheMap(String key, Map<String, T> dataMap) {
 
         HashOperations hashOperations = redisTemplate.opsForHash();
         if (null != dataMap) {
@@ -156,7 +156,7 @@ public class RedisCacheUtil<T> {
      * @param key
      * @return
      */
-    public <T> Map<String, T> getCacheMap(String key) {
+    public  Map<String, T> getCacheMap(String key) {
         Map<String, T> map = redisTemplate.opsForHash().entries(key);
         return map;
     }
@@ -169,7 +169,7 @@ public class RedisCacheUtil<T> {
      * @param dataMap
      * @return
      */
-    public <T> HashOperations<String, Integer, T> setCacheIntegerMap(String key, Map<Integer, T> dataMap) {
+    public  HashOperations<String, Integer, T> setCacheIntegerMap(String key, Map<Integer, T> dataMap) {
         HashOperations hashOperations = redisTemplate.opsForHash();
         if (null != dataMap) {
             for (Map.Entry<Integer, T> entry : dataMap.entrySet()) {

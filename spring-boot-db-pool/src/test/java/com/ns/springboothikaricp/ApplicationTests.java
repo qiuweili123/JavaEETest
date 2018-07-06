@@ -18,8 +18,7 @@ public class ApplicationTests {
     @Resource
     private UserInfoMapper userInfoMapper;
 
-    @Resource
-    private RedisDao redisDao;
+
 
 
     @Test
@@ -33,12 +32,5 @@ public class ApplicationTests {
         }
     }
 
-    @Test
-    public void  setAndIncr() throws Exception{
-        String key="stock_key_0122";
-        redisDao.set(key,1L);
-        redisDao.incr(key,10l);
-
-    }
 
 }

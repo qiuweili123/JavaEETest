@@ -1,117 +1,141 @@
 package com.ns.springboothikaricp.dao;
 
-import org.springframework.data.redis.core.ReactiveRedisTemplate;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
+import com.ns.springboothikaricp.bean.User;
+import com.ns.springboothikaricp.util.GenericsUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Repository;
+import springfox.documentation.spring.web.json.Json;
 
 import javax.annotation.Resource;
-import java.io.Serializable;
+import javax.print.DocFlavor;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-@Repository
+
 public class RedisDao {
 
-     @Resource
-     private RedisTemplate<String,Object> redisTemplate;
+
+    @Resource
+    private RedisTemplate redisTemplate;
 
 
-     /**
-      * 写入缓存
-      *
-      * @param key   key
-      * @param value value
-      * @return true表示成功
-      */
-     public boolean set(final String key, Object value) {
-          try {
-               ValueOperations<String, Object> operations = redisTemplate.opsForValue();
-               operations.set(key, value);
-               return true;
-          } catch (Exception e) {
-               throw e;
-          }
 
-     }
 
-     /**
-      * 写入缓存设置时效时间
-      *
-      * @param key   key
-      * @param value value
-      * @return true表示成功
-      */
-     public boolean set(final String key, Object value, Long expireTime) {
-          try {
-               ValueOperations<String, Object> operations = redisTemplate.opsForValue();
-               operations.set(key, value);
-               redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
-               return true;
-          } catch (Exception e) {
-               throw e;
-          }
-     }
+    /**
+     * 写入缓存
+     *
+     * @param key   key
+     * @param value value
+     * @return true表示成功
+     */
+    public <T> void set(final String key, T value) {
+        ValueOperations<String,String> operations = redisTemplate.opsForValue();
 
-     /**
-      * 删除对应的value
-      *
-      * @param key
-      */
-     public void remove(final String key) {
-          if (exists(key)) {
-               redisTemplate.delete(key);
-          }
-     }
 
-     /**
-      * 判断缓存中是否有对应的value
-      *
-      * @param key
-      * @return
-      */
-     public boolean exists(final String key) {
-          return redisTemplate.hasKey(key);
-     }
+        operations.set(key,JSON.toJSONString(value));
+    }
 
-     /**
-      * 读取缓存
-      *
-      * @param key
-      * @return
-      */
-     public Object get(final String key) {
-          ValueOperations<String, Object> operations = redisTemplate.opsForValue();
-          return operations.get(key);
-     }
+    /**
+     * 写入缓存设置时效时间
+     *
+     * @param key   key
+     * @param value value
+     * @return true表示成功
+     */
+    public <T> void set(final String key, T value, Long expireTime) {
+        ValueOperations<String, String> operations = redisTemplate.opsForValue();
 
-     /**
-      * 原子自增
-      *
-      * @param key
-      * @param incBy
-      * @return
-      */
-     public long incr(final String key, long incBy) {
-          try {
-               return redisTemplate.opsForValue().increment(key, incBy);
-          } catch (Exception e) {
-               throw e;
-          }
-     }
+        operations.set(key,  JSON.toJSONString(value), expireTime,TimeUnit.SECONDS);
+    }
+    /**
+     * 读取缓存
+     *
+     * @param key
+     * @return
+     */
+    public <T> T get(final String key,Class<T> entityClass) {
 
-     /**
-      * 设置key过期时长
-      *
-      * @param key
-      * @return
-      */
-     public void expire(final String key, long expireSeconds) {
-          try {
+        ValueOperations<String,String> operations = redisTemplate.opsForValue();
 
-               //redisTemplate.execute(c -> c.exists(key.getBytes()));
-               redisTemplate.expire(key, expireSeconds, TimeUnit.SECONDS);
-          } catch (Exception e) {
-               throw e;
-          }
-     }
+       return    JSON.parseObject(operations.get(key),entityClass);
+
+    }
+    public <T> T get(final String key) {
+
+        ValueOperations<String,T> operations = redisTemplate.opsForValue();
+
+        return    operations.get(key);
+
+    }
+
+    /**
+     * 删除对应的value
+     *
+     * @param key
+     */
+    public boolean delete(final String key) {
+       return  redisTemplate.delete(key);
+    }
+
+    /**
+     * 批量删除
+     * @param keys
+     * @return
+     */
+    public boolean deleteBatch(final String ... keys) {
+        return  redisTemplate.delete(keys);
+    }
+
+
+    /**
+     * 判断缓存中是否有对应的value
+     *
+     * @param key
+     * @return
+     */
+    public boolean exists(final String key) {
+        return redisTemplate.hasKey(key);
+    }
+
+
+    /**
+     * 原子自增
+     *
+     * @param key
+     * @param incBy 负值表示decr
+     * @return
+     */
+    public long incr(final String key, long incBy) {
+
+        return redisTemplate.opsForValue().increment(key, incBy);
+
+    }
+
+    /**
+     * 设置key过期时长
+     *
+     * @param key
+     * @return
+     */
+    public boolean expire(final String key, long expireSeconds) {
+          return   redisTemplate.expire(key, expireSeconds, TimeUnit.SECONDS);
+    }
+
+    /**
+     * 指定的时间点失效
+     * @param key
+     * @param date
+     * @return
+     */
+    public boolean expireAt(final String key, Date date) {
+        return   redisTemplate.expireAt(key,date);
+    }
+
+
+
+
 }
