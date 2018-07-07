@@ -1,6 +1,7 @@
 package com.ns.springboothikaricp.dao;
 
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +11,7 @@ import javax.annotation.Resource;
 public class StringRedisDao extends RedisDao {
 
   @Resource
-  private  RedisTemplate stringRedisTemplate;
+  private StringRedisTemplate stringRedisTemplate;
 
     @Override
     protected RedisTemplate getRedisTemplate() {

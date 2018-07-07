@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.ns.springboothikaricp.bean.User;
-import com.ns.springboothikaricp.util.GenericsUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Repository;
@@ -17,19 +16,6 @@ import java.util.concurrent.TimeUnit;
 
 
 public abstract class RedisDao {
-
-   /* private Class<T> entityClass;
-
-    public RedisDao(){
-
-       entityClass= GenericsUtils.getSuperClassGenricType(this.getClass());
-        System.out.println("##entityCalss=="+entityClass);
-    }
-
-*/
-
-
-
     /**
      * 写入缓存
      *
@@ -64,13 +50,6 @@ public abstract class RedisDao {
      * @return
      */
 
-    /*public  T get(final String key) {
-
-        ValueOperations<String,T> operations = redisTemplate.opsForValue();
-
-       return   operations.get(key);
-
-    }*/
     public <T> T get(final String key) {
 
         ValueOperations<String,T> operations = getRedisTemplate().opsForValue();
