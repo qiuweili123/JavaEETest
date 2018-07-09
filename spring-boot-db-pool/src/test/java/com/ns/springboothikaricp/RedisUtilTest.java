@@ -1,10 +1,8 @@
 package com.ns.springboothikaricp;
 
-import com.alibaba.fastjson.JSON;
 import com.ns.springboothikaricp.bean.User;
 import com.ns.springboothikaricp.dao.JdkRedisDao;
-import com.ns.springboothikaricp.dao.JsonRedisDao;
-import com.ns.springboothikaricp.dao.RedisDao;
+import com.ns.springboothikaricp.dao.AbsRedisDao;
 import com.ns.springboothikaricp.dao.StringRedisDao;
 import com.ns.springboothikaricp.util.RedisCacheUtil;
 import org.junit.Test;
@@ -21,7 +19,7 @@ public class RedisUtilTest extends ApplicationTests {
     private JdkRedisDao jdkRedisDao;
 
     @Resource
-    private JsonRedisDao jsonRedisDao;
+    private AbsRedisDao jsonRedisDao;
 
     @Resource
 

@@ -1,10 +1,8 @@
 package com.ns.springboothikaricp.config;
 
-import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.ns.springboothikaricp.config.serializer.KryoRedisSerializer;
-import com.ns.springboothikaricp.dao.RedisDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

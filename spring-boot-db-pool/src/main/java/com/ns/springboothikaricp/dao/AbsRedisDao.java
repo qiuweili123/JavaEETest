@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 
-public abstract class RedisDao {
+public abstract class AbsRedisDao {
     /**
      * 写入缓存
      *
