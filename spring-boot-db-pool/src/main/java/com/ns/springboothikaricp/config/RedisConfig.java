@@ -7,16 +7,23 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 public class RedisConfig {
 
 
+    @Bean
+    public RedisSerializer stringRedisSerializer() {
+
+        return new StringRedisSerializer();
+    }
 
     @Bean("jsonRedisTemplate")
-    public RedisTemplate<Object,Object> jsonRedisTemplate(RedisConnectionFactory  connectionFactory){
+    public RedisTemplate<Object, Object> jsonRedisTemplate(RedisConnectionFactory connectionFactory) {
 
         RedisTemplate<Object, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(connectionFactory);
@@ -32,14 +39,15 @@ public class RedisConfig {
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
+
     @Bean("kyroRedisTemplate")
-    public RedisTemplate<Object,Object> kyroRedisTemplate(RedisConnectionFactory  connectionFactory){
+    public RedisTemplate<Object, Object> kyroRedisTemplate(RedisConnectionFactory connectionFactory) {
 
         RedisTemplate<Object, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(connectionFactory);
 
-         KryoRedisSerializer<Object> kryoRedisSerializer=new KryoRedisSerializer<>(Object.class);
-         redisTemplate.setValueSerializer(kryoRedisSerializer);
+        KryoRedisSerializer<Object> kryoRedisSerializer = new KryoRedisSerializer<>(Object.class);
+        redisTemplate.setValueSerializer(kryoRedisSerializer);
 
         // 设置键（key）的序列化采用StringRedisSerializer。
         redisTemplate.setKeySerializer(new StringRedisSerializer());
@@ -50,7 +58,7 @@ public class RedisConfig {
 
 
     @Bean("jdkRedisTemplate")
-    public RedisTemplate<Object,Object> jdkRedisTemplate(RedisConnectionFactory  connectionFactory){
+    public RedisTemplate<Object, Object> jdkRedisTemplate(RedisConnectionFactory connectionFactory) {
 
         RedisTemplate<Object, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(connectionFactory);
@@ -60,5 +68,14 @@ public class RedisConfig {
         redisTemplate.setDefaultSerializer(new StringRedisSerializer());
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
+    }
+
+    @Bean
+    public RedisMessageListenerContainer listenerContainer(RedisConnectionFactory connectionFactory) {
+        RedisMessageListenerContainer redisMessageListenerContainer = new RedisMessageListenerContainer();
+
+        redisMessageListenerContainer.setConnectionFactory(connectionFactory);
+
+        return redisMessageListenerContainer;
     }
 }
