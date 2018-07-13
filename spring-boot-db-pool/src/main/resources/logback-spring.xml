@@ -3,7 +3,19 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
     <!-- <property name="LOG_HOME" value="./log" /> -->
-    <property resource="application.properties"/>
+
+    <!--取得spring boot中的变量值有2种方式，一种是resource,另外一种是使用springProperty，使用springProperty好处能指定默认值-->
+   <!-- <property resource="application.properties"/>
+-->
+
+    <springProperty scope="context" name="logName" source="spring.application.name" defaultValue="app"/>
+    <springProperty scope="context" name="logPath" source="logging.path" defaultValue="java.io.tmpdir"/>
+
+
+    <property  name="PATTERN" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>
+
+
+    <property  name="CHARSET" value="UTF-8"/>
     <jmxConfigurator/>
     <!-- 控制台输出 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -17,26 +29,34 @@
         </filter>-->
     </appender>
 
-    <appender name="FILE"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+    <appender name="APP" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 定义文件的名称 -->
-        <file>${logging.path}/${spring.application.name}/${spring.application.name}.log
+        <file>${logPath}/${logName}/app.log
         </file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">      <!-- rollover daily -->
             <!-- 设置达到指定大小限制后输出的日志名称 -->
-            <fileNamePattern>${logging.path}/${spring.application.name}/${spring.application.name}-%d{yyyy-MM-dd}-%i.log
-            </fileNamePattern>
+            <fileNamePattern>${logging.path}/${logName}/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+
+
             <maxHistory>30</maxHistory>
+            <!--
             <timeBasedFileNamingAndTriggeringPolicy
-                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">        <!-- or whenever the file size reaches 100MB -->
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">        &lt;!&ndash; or whenever the file size reaches 100MB &ndash;&gt;
                 <maxFileSize>50MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
+            </timeBasedFileNamingAndTriggeringPolicy>-->
         </rollingPolicy>
         <encoder>
             <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
-            <pattern>[%d][%-5level] %logger{20}[%line] - %msg%n</pattern>
+            <pattern>${PATTERN}</pattern>
             <charset>UTF-8</charset>
         </encoder>
+    </appender>
+
+    <appender name="ASYN_APP" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="APP"/>
+        <queueSize>1024</queueSize>
+        <neverBlock>true</neverBlock>
     </appender>
 
     <!--打开DAO层日志，此功能要能使用必须在mybatis配置文件中添加如下配置
@@ -47,9 +67,18 @@
     -->
     <logger name="dao" level="${log.sql.level}"/>
 
+    <logger name="app" level="info">
+        <appender-ref ref="ASYN_APP" />
+    </logger>
+
+    <logger name="rpc" level="info">
+        <appender-ref ref="APP" />
+        <!--<appender-ref ref="RPC" />-->
+    </logger>
+
+
     <!-- 统一日志输出级别，其他appender中如果有高于此处等级设置的也会被输出 -->
     <root level="INFO">
-        <appender-ref ref="STDOUT"/>
-        <appender-ref ref="FILE"/>
+       <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

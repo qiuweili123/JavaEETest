@@ -1,5 +1,6 @@
 package com.ns.springboothikaricp.controller;
 
+import com.ns.common.ServiceException;
 import com.ns.springboothikaricp.bean.User;
 import com.ns.springboothikaricp.constants.PathConstants;
 import com.ns.springboothikaricp.dao.UserInfoMapper;
@@ -28,12 +29,19 @@ public class UserController {
     public Object getById(long id) {
         //userDao.getName();
         System.out.println("id=4444===44=" + (id % 2));
+        User user;
         if ((id % 2) == 0) {
-            return userInfoMapper.selectByEvenUserId(id);
+            user = userInfoMapper.selectByEvenUserId(id);
         } else {
 
-            return userInfoMapper.selectByOddUserId(id);
+            user = userInfoMapper.selectByOddUserId(id);
         }
+        //Optional.ofNullable(user).orElseThrow(()-> new ServiceException("user weikong","001"));
+
+        if (user == null) {
+            throw new ServiceException("user weikong", "001");
+        }
+        return user;
     }
 
     @ApiOperation(value = "添加用户信息", notes = "添加用户信息")
@@ -47,4 +55,17 @@ public class UserController {
 
         return "success";
     }
+
+    @RequestMapping("/getBySEId")
+    public Object getBySEId(long id) {
+        throw new ServiceException("错误信息", "2001");
+    }
+
+    @RequestMapping("/getByEId")
+    public Object getByEId(long id) {
+
+        int n=1/0;
+         return  null;
+    }
+
 }
