@@ -8,6 +8,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -17,6 +19,8 @@ import javax.annotation.Resource;
 @RequestMapping(PathConstants.API + "/user")
 
 public class UserController {
+    private static final Logger APP_LOGGER = LoggerFactory.getLogger("app");
+
     @Resource
     private UserInfoMapper userInfoMapper;
 
@@ -28,7 +32,7 @@ public class UserController {
     @GetMapping("/getById")
     public Object getById(long id) {
         //userDao.getName();
-        System.out.println("id=4444===44=" + (id % 2));
+        APP_LOGGER.info("id=4444===44=" + (id % 2));
         User user;
         if ((id % 2) == 0) {
             user = userInfoMapper.selectByEvenUserId(id);

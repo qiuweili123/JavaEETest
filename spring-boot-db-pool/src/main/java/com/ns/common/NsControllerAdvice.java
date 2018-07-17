@@ -65,6 +65,8 @@ public class NsControllerAdvice extends ResponseEntityExceptionHandler {
 
         APP_LOGGER.error("进入 serviceException");
 
+        APP_LOGGER.error(ExceptionUtils.getStackTrace(e));
+
         JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("msg", e.getMsg());
