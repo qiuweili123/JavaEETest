@@ -1,11 +1,10 @@
 package com.ns.common;
 
-public class ServiceException  extends  RuntimeException {
+public class ServiceException extends RuntimeException {
 
     private String msg;
 
     private String code;
-
 
 
     public ServiceException(String msg, String code) {

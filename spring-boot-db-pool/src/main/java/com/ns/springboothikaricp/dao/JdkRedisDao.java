@@ -10,7 +10,7 @@ public class JdkRedisDao extends AbsRedisDao {
 
 
     @Resource
-    private RedisTemplate  jdkRedisTemplate;
+    private RedisTemplate jdkRedisTemplate;
 
     @Override
     protected RedisTemplate getRedisTemplate() {

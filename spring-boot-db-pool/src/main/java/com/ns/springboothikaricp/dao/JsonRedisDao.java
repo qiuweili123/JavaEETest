@@ -14,9 +14,11 @@ public class JsonRedisDao extends AbsRedisDao {
     private RedisTemplate jsonRedisTemplate;
 
 
-    public <T> T get(String key,Class<T>  entityClass)  {
+    public <T> T get(String key, Class<T> entityClass) {
 
-         return Optional.ofNullable(get(key)).map(obj-> JSONObject.toJavaObject((JSONObject) obj,entityClass)).orElseGet(()->{return null;});
+        return Optional.ofNullable(get(key)).map(obj -> JSONObject.toJavaObject((JSONObject) obj, entityClass)).orElseGet(() -> {
+            return null;
+        });
 
     }
 
@@ -32,8 +34,6 @@ public class JsonRedisDao extends AbsRedisDao {
         return getRedisTemplate().opsForValue().increment(key, incBy);
 
     }
-
-
 
 
     @Override

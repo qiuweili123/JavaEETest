@@ -1,8 +1,7 @@
 package com.ns.springboothikaricp.dao;
 
-import org.springframework.dao.DataAccessException;
-import org.springframework.data.redis.connection.RedisConnection;
-import org.springframework.data.redis.core.*;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -104,11 +103,9 @@ public abstract class AbsRedisDao {
     }
 
 
-    public <T> void pub(String channal ,T object){
-        getRedisTemplate().convertAndSend(channal,object);
+    public <T> void pub(String channal, T object) {
+        getRedisTemplate().convertAndSend(channal, object);
     }
-
-
 
 
     protected abstract RedisTemplate getRedisTemplate();

@@ -68,8 +68,16 @@ public class UserController {
     @RequestMapping("/getByEId")
     public Object getByEId(long id) {
 
-        int n=1/0;
-         return  null;
+        int n = 1 / 0;
+        return null;
     }
+    @GetMapping("/getByUserId")
+    public Object getByUserId(String email) {
+
+        System.out.println("##email=="+email);
+        return email;
+    }
+
+
 
 }

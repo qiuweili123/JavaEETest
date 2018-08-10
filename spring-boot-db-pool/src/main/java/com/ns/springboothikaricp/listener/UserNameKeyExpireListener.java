@@ -1,7 +1,5 @@
 package com.ns.springboothikaricp.listener;
 
-import com.ns.springboothikaricp.dao.JsonRedisDao;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.listener.KeyspaceEventMessageListener;
 import org.springframework.data.redis.listener.PatternTopic;
@@ -26,12 +24,10 @@ public class UserNameKeyExpireListener extends KeyspaceEventMessageListener {
     }
 
 
-
     @Override
     protected void doRegister(RedisMessageListenerContainer listenerContainer) {
         listenerContainer.addMessageListener(this, KEYEVENT_EXPIRED_TOPIC);
     }
-
 
 
     @Override
@@ -39,6 +35,6 @@ public class UserNameKeyExpireListener extends KeyspaceEventMessageListener {
 
         String key = stringRedisSerializer.deserialize(message.getBody());
         System.out.println("##before value##");
-        System.out.println("key:::"+key);
+        System.out.println("key:::" + key);
     }
 }

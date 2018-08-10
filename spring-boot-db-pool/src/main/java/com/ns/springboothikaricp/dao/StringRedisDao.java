@@ -9,8 +9,8 @@ import javax.annotation.Resource;
 @Repository
 public class StringRedisDao extends AbsRedisDao {
 
-  @Resource
-  private StringRedisTemplate stringRedisTemplate;
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
 
     @Override
     protected RedisTemplate getRedisTemplate() {
