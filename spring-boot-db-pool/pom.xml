@@ -46,15 +46,15 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <!--  <artifactId>spring-boot-starter-data-redis</artifactId>-->
-           <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
-</dependency>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+        </dependency>
 
-<dependency>
-    <groupId>org.springframework.data</groupId>
-    <artifactId>spring-data-redis</artifactId>
-</dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
 
-<!--防止出现congfig异常-->
+        <!--防止出现congfig异常-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -104,11 +104,11 @@
 
         <!--swagger2接口-->
 
-         <dependency>
-              <groupId>io.springfox</groupId>
-              <artifactId>springfox-swagger-ui</artifactId>
-              <version>2.8.0</version>
-          </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.8.0</version>
+        </dependency>
 
         <dependency>
             <groupId>io.springfox</groupId>
@@ -135,24 +135,29 @@
         <!--
  -->
         <!--mq-->
-   <dependency>
+        <dependency>
             <groupId>org.rocketmq</groupId>
             <artifactId>spring-boot-starter-rocketmq</artifactId>
             <version>1.2.0.RELEASE</version>
         </dependency>
 
-       <!-- <dependency>
-            <groupId>com.qianmi</groupId>
-            <artifactId>spring-boot-starter-rocketmq</artifactId>
-            <version>1.1.0-RELEASE</version>
-        </dependency>
--->
+        <!-- <dependency>
+             <groupId>com.qianmi</groupId>
+             <artifactId>spring-boot-starter-rocketmq</artifactId>
+             <version>1.1.0-RELEASE</version>
+         </dependency>
+ -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-logback-1.x</artifactId>
+            <version>5.0.0-beta2</version>
+        </dependency>
 
     </dependencies>
 
