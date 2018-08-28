@@ -16,10 +16,7 @@ public abstract class AbsRedisDao {
      * @return true表示成功
      */
     public <T> void set(final String key, T value) {
-
         ValueOperations<String, T> operations = getRedisTemplate().opsForValue();
-
-
         operations.set(key, value);
     }
 
@@ -32,7 +29,6 @@ public abstract class AbsRedisDao {
      */
     public <T> void set(final String key, T value, Long expireTime) {
         ValueOperations<String, T> operations = getRedisTemplate().opsForValue();
-
         operations.set(key, value, expireTime, TimeUnit.SECONDS);
     }
 
@@ -44,11 +40,8 @@ public abstract class AbsRedisDao {
      */
 
     public <T> T get(final String key) {
-
         ValueOperations<String, T> operations = getRedisTemplate().opsForValue();
-
         return operations.get(key);
-
     }
 
     /**

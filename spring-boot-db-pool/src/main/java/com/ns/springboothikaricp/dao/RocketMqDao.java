@@ -1,20 +1,16 @@
 package com.ns.springboothikaricp.dao;
 
-import com.alibaba.fastjson.JSON;
-import org.apache.rocketmq.common.message.Message;
 import org.springframework.stereotype.Repository;
-
-import javax.annotation.Resource;
 
 @Repository
 public class RocketMqDao {
-   // @Resource
+    // @Resource
     //private RocketMQProducerTemplate rocketMqTemplate;
    /*  @Resource
     private RocketMQTemplate rocketMQTemplate;*/
 
     public <T> void sendMsg(T instance) throws Exception {
-       // rocketMQTemplate.convertAndSend("test-topic-1", "Hello, World!");
+        // rocketMQTemplate.convertAndSend("test-topic-1", "Hello, World!");
 /*        Message message = new Message();
 
 

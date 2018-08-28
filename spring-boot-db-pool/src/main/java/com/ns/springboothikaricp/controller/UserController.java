@@ -32,6 +32,7 @@ public class UserController {
     @GetMapping("/getById")
     public Object getById(long id) {
         //userDao.getName();
+
         APP_LOGGER.info("id=4444===44=" + (id % 2));
         User user;
         if ((id % 2) == 0) {
@@ -71,13 +72,12 @@ public class UserController {
         int n = 1 / 0;
         return null;
     }
+
     @GetMapping("/getByUserId")
     public Object getByUserId(String email) {
-
-        System.out.println("##email=="+email);
+        System.out.println("##email==" + email);
         return email;
     }
-
 
 
 }

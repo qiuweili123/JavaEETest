@@ -17,8 +17,6 @@ public class ApplicationTests {
     private UserInfoMapper userInfoMapper;
 
 
-
-
     @Test
     public void testDynamicDatasource() {
         User userInfo;
