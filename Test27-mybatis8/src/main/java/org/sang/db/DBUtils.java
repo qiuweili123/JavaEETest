@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.lang.annotation.Target;
 import java.util.Properties;
 
 /**
@@ -64,7 +63,7 @@ public class DBUtils {
         }
         synchronized (CLASS_LOCK) {
             if (sqlSessionFactory == null) {
-                sqlSessionFactory = new SqlSessionFactoryBuilder().build(cfgReader,properties);
+                sqlSessionFactory = new SqlSessionFactoryBuilder().build(cfgReader, properties);
             }
         }
         return sqlSessionFactory;

@@ -8,7 +8,7 @@ import java.io.Serializable;
  * Created by sang on 17-1-13.
  */
 @Alias("u")
-public class User implements Serializable{
+public class User implements Serializable {
     private Long id;
     private String username;
     private String password;

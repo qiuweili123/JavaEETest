@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class DemoServiceImpl implements DemoService {
     @Autowired
     PersonRepository personRepository;
+
     /**
      * 插入 或者更新
      * 插入或更新数据到dataMap中
@@ -34,6 +35,7 @@ public class DemoServiceImpl implements DemoService {
         System.out.println("删除了id、key为" + id + "的数据缓存");
         personRepository.delete(id);
     }
+
     /**
      * 查询
      * 如果数据没有缓存,那么从dataMap里面获取,如果缓存了,

@@ -21,9 +21,10 @@ public class UserController {
         //url:http://localhost:8080/user can access
         return "url:" + request.getRequestURL() + " can access";
     }
+
     //http://localhost:8080/user/user/张三
     @ResponseBody
-    @RequestMapping(value = "/user/{str}",produces = "text/plain;charset=UTF-8")
+    @RequestMapping(value = "/user/{str}", produces = "text/plain;charset=UTF-8")
     public String pathVar(@PathVariable String str, HttpServletRequest request) {
         //url:http://localhost:8080/user/user/%E5%BC%A0%E4%B8%89 can access , str is 张三
         return "url:" + request.getRequestURL() + " can access , str is " + str;
@@ -32,7 +33,7 @@ public class UserController {
 
     //http://localhost:8080/user/rp?id=100
     @ResponseBody
-    @RequestMapping(value = "/rp",produces = "text/plain;charset=UTF-8")
+    @RequestMapping(value = "/rp", produces = "text/plain;charset=UTF-8")
     public String requestParams(long id, HttpServletRequest request) {
         //url:http://localhost:8080/user/rp can access , username is :100
         return "url:" + request.getRequestURL() + " can access , username is :" + id;
@@ -48,7 +49,7 @@ public class UserController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/getJson",produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/getJson", produces = "application/json;charset=UTF-8")
     public UserBean passObj(UserBean userBean) {
         return userBean;
     }
@@ -56,7 +57,7 @@ public class UserController {
     //http://localhost:8080/user/n1
     //http://localhost:8080/user/n2
     @ResponseBody
-    @RequestMapping(value = {"/n1","/n2"},produces = "text/plain;charset=UTF-8")
+    @RequestMapping(value = {"/n1", "/n2"}, produces = "text/plain;charset=UTF-8")
     public String group() {
         //不同路径定位到同一方法
         return "不同路径定位到同一方法";

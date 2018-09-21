@@ -27,6 +27,7 @@ import java.io.IOException;
 public class MyMVCConfig extends WebMvcConfigurerAdapter {
     @Resource
     DBConfig dbConfig;
+
     @Bean
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -71,6 +72,7 @@ public class MyMVCConfig extends WebMvcConfigurerAdapter {
         }
         return sqlSessionFactoryBean;
     }
+
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
@@ -78,6 +80,7 @@ public class MyMVCConfig extends WebMvcConfigurerAdapter {
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactoryBean");
         return mapperScannerConfigurer;
     }
+
     @Bean
     public DataSourceTransactionManager transactionManager() {
         DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
@@ -89,6 +92,7 @@ public class MyMVCConfig extends WebMvcConfigurerAdapter {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptors());
     }
+
     @Bean
     public LoginInterceptors loginInterceptors() {
         return new LoginInterceptors();

@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
 
@@ -29,7 +28,7 @@ public class UserService {
             scope = com.netflix.hystrix.HystrixCollapser.Scope.GLOBAL,
             batchMethod = "findByIds",
             collapserProperties = {
-                @HystrixProperty(name="timerDelayInMilliseconds", value = "100")
+                    @HystrixProperty(name = "timerDelayInMilliseconds", value = "100")
             }
     )
     public Future<String> findById(Long id) {

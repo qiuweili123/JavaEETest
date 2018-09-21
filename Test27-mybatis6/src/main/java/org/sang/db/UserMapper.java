@@ -10,12 +10,18 @@ import java.util.List;
  */
 public interface UserMapper {
     public List<User> getUser();
+
     public List<User> getUser2();
+
     public List<Person> getPerson();
 
     public int insertUser(User user);
+
     public int insertUser2(User user);
+
     public int insertUser3(User user);
+
     public int insertUser4(User user);
+
     public int insertPerson(Person p);
 }

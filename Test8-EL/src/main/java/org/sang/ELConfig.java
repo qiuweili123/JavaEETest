@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 @Configuration
 @ComponentScan("org.sang")
-@PropertySource(value = "t.properties",encoding = "UTF-8")
+@PropertySource(value = "t.properties", encoding = "UTF-8")
 public class ELConfig {
     @Value("I Love You!")
     private String normal;
@@ -49,11 +49,11 @@ public class ELConfig {
             System.out.println(osArch);
             System.out.println(randomNumber);
             System.out.println(author);
-            System.out.println(IOUtils.toString(testFile.getInputStream(),"UTF-8"));
+            System.out.println(IOUtils.toString(testFile.getInputStream(), "UTF-8"));
             //访问网址
-            System.out.println(IOUtils.toString(testUrl.getInputStream(),"UTF-8"));
+            System.out.println(IOUtils.toString(testUrl.getInputStream(), "UTF-8"));
             //获取网址
-            System.out.println("testUrl.getURL():"+testUrl.getURL());
+            System.out.println("testUrl.getURL():" + testUrl.getURL());
             System.out.println(su);
             System.out.println(sp);
             System.out.println(sn);

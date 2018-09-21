@@ -146,6 +146,7 @@ public class Main {
         }
 
     }
+
     @Test
     public void test7() {
         SqlSession sqlSession = null;
@@ -154,7 +155,7 @@ public class Main {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
             User user = new User(null, "奥巴牛", "123456", "米国");
             int i = userMapper.insertUser(user);
-            System.out.println("i:"+i+";id:"+user.getId());
+            System.out.println("i:" + i + ";id:" + user.getId());
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
@@ -166,6 +167,7 @@ public class Main {
         }
 
     }
+
     @Test
     public void test8() {
         SqlSession sqlSession = null;
@@ -174,7 +176,7 @@ public class Main {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
             User user = new User(null, "米歇尔", "222222", "米国");
             int i = userMapper.insertUser2(user);
-            System.out.println("i:"+i+";id:"+user.getId());
+            System.out.println("i:" + i + ";id:" + user.getId());
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();

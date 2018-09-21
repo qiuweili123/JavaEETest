@@ -161,6 +161,7 @@ public class Main {
         }
 
     }
+
     @Test
     public void test7() {
         SqlSession sqlSession = null;

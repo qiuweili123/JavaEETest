@@ -10,9 +10,14 @@ import java.util.Map;
  */
 public interface UserMapper {
     public User getUser(Long id);
+
     public List<User> getUser2();
+
     public List<User> getUser3();
+
     public List<User> getUser4();
+
     public List<User> getUser5();
-    public List<Map<String,Object>> getUser6();
+
+    public List<Map<String, Object>> getUser6();
 }

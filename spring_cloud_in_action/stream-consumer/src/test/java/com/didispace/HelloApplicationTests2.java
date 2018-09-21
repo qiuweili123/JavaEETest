@@ -16,12 +16,13 @@ import org.springframework.test.context.web.WebAppConfiguration;
 //@DirtiesContext
 public class HelloApplicationTests2 {
 
-	@Autowired @Qualifier("input")
-	private MessageChannel output;
+    @Autowired
+    @Qualifier("input")
+    private MessageChannel output;
 
-	@Test
-	public void contextLoads() {
-		output.send(MessageBuilder.withPayload("From MessageChannel").build());
-	}
+    @Test
+    public void contextLoads() {
+        output.send(MessageBuilder.withPayload("From MessageChannel").build());
+    }
 
 }

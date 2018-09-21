@@ -17,7 +17,7 @@ public class ComputeController {
     @Autowired
     private DiscoveryClient client;
 
-    @RequestMapping(value = "/add" ,method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
         ServiceInstance instance = client.getLocalServiceInstance();
         Integer r = a + b;

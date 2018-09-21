@@ -29,6 +29,7 @@ public class User7 {
     public void setProperties(Properties properties) {
         this.properties = properties;
     }
+
     public void test() {
         StringBuffer sb1 = new StringBuffer();
         for (String name : names) {

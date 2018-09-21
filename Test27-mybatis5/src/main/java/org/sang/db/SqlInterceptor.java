@@ -4,7 +4,6 @@ import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
-import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
@@ -20,7 +19,7 @@ import java.util.Properties;
 /**
  * Created by sang on 17-1-15.
  */
-@Intercepts( { @Signature(type = Executor.class, method = "update", args = { MappedStatement.class, Object.class }), @Signature(type = Executor.class, method = "query", args = { MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class }) })
+@Intercepts({@Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class}), @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})})
 public class SqlInterceptor implements Interceptor {
 
     private Properties properties;
@@ -43,7 +42,7 @@ public class SqlInterceptor implements Interceptor {
 
     /**
      * sql执行的具体位置与sql的拼接
-     * */
+     */
     public static String getSql(Configuration configuration, BoundSql boundSql, String sqlId) {
         String sql = showSql(configuration, boundSql);
         StringBuilder str = new StringBuilder(600);
@@ -55,7 +54,7 @@ public class SqlInterceptor implements Interceptor {
 
     /**
      * 拼接sql中的所有参数
-     * */
+     */
     private static String getParameterValue(Object obj) {
         String value = null;
         if (obj instanceof String) {
@@ -75,7 +74,7 @@ public class SqlInterceptor implements Interceptor {
 
     /**
      * 解析sql
-     * */
+     */
     public static String showSql(Configuration configuration, BoundSql boundSql) {
         Object parameterObject = boundSql.getParameterObject();
         List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();

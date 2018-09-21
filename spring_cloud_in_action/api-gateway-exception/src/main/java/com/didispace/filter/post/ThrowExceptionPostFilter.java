@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ThrowExceptionPostFilter extends ZuulFilter  {
+public class ThrowExceptionPostFilter extends ZuulFilter {
 
     private static Logger log = LoggerFactory.getLogger(ThrowExceptionPostFilter.class);
 

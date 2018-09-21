@@ -16,9 +16,9 @@ public class RocketMQHealthIndicator implements HealthIndicator {
         return Health.up().build();
     }
 
-	private int check() {
-		 // perform some specific health check
+    private int check() {
+        // perform some specific health check
         return 0;
-	}
+    }
 
 }

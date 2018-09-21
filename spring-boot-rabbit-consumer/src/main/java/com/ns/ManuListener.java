@@ -5,11 +5,11 @@ import org.springframework.amqp.core.Message;
 /**
  * Created by lenovo on 2017/11/14.
  */
-public class ManuListener extends  AbsManuAckMqListener<User> {
+public class ManuListener extends AbsManuAckMqListener<User> {
 
     @Override
     public boolean processingMessage(User obj) {
-        System.out.println("## ManuListener name="+obj.getName());
+        System.out.println("## ManuListener name=" + obj.getName());
         return true;
     }
 

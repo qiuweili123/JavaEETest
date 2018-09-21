@@ -15,7 +15,7 @@ public class Test25CacheApplicationTests {
 
     @Test
     public void contextLoads() {
-        System.out.println("demo=="+demoService);
+        System.out.println("demo==" + demoService);
     }
 
 

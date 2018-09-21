@@ -19,7 +19,7 @@ public class WsController {
     public void handleChat(Principal principal, String msg) {
         if (principal.getName().equals("sang")) {
             messagingTemplate.convertAndSendToUser("lenve", "/queue/notifications", principal.getName() + "给您发来了消息：" + msg);
-        }else{
+        } else {
             messagingTemplate.convertAndSendToUser("sang", "/queue/notifications", principal.getName() + "给您发来了消息：" + msg);
         }
     }

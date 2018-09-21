@@ -12,7 +12,7 @@ public class Test {
         String[] names2 = new String[]{"强", "亚", "哲", "凡", "路", "举", "昕", "科", "武", "田"};
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
-            System.out.println("insert into person(address,name,age) values('" + addrss[random.nextInt(addrss.length)] + "','" + names1[random.nextInt(names1.length)]+ names2[random.nextInt(names2.length)] + "','" + (20 + random.nextInt(70)) + "');");
+            System.out.println("insert into person(address,name,age) values('" + addrss[random.nextInt(addrss.length)] + "','" + names1[random.nextInt(names1.length)] + names2[random.nextInt(names2.length)] + "','" + (20 + random.nextInt(70)) + "');");
         }
     }
 }

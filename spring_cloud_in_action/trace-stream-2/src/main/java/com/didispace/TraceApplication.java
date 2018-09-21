@@ -16,17 +16,17 @@ import javax.servlet.http.HttpServletRequest;
 @SpringBootApplication
 public class TraceApplication {
 
-	private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
-	@RequestMapping(value = "/trace-2", method = RequestMethod.GET)
-	public String trace(HttpServletRequest request) {
-		logger.info("===<call trace-2, TraceId={}, SpanId={}>===",
-				request.getHeader("X-B3-TraceId"), request.getHeader("X-B3-SpanId"));
-		return "Trace";
-	}
+    @RequestMapping(value = "/trace-2", method = RequestMethod.GET)
+    public String trace(HttpServletRequest request) {
+        logger.info("===<call trace-2, TraceId={}, SpanId={}>===",
+                request.getHeader("X-B3-TraceId"), request.getHeader("X-B3-SpanId"));
+        return "Trace";
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(TraceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TraceApplication.class, args);
+    }
 
 }

@@ -250,9 +250,9 @@
                     var word = stream.current();
                     style = state.lastTok == "." ? "property"
                         : keywords.propertyIsEnumerable(stream.current()) ? "keyword"
-                        : /^[A-Z]/.test(word) ? "tag"
-                        : (state.lastTok == "def" || state.lastTok == "class" || state.varList) ? "def"
-                        : "variable";
+                            : /^[A-Z]/.test(word) ? "tag"
+                                : (state.lastTok == "def" || state.lastTok == "class" || state.varList) ? "def"
+                                    : "variable";
                     if (style == "keyword") {
                         thisTok = word;
                         if (indentWords.propertyIsEnumerable(word)) kwtype = "indent";

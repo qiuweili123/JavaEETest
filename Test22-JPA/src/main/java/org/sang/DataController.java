@@ -18,7 +18,7 @@ public class DataController {
     PersonRepository personRepository;
 
     @RequestMapping("/save")
-    public Person save(String name,String address,Integer age) {
+    public Person save(String name, String address, Integer age) {
         Person person = personRepository.save(new Person(null, name, age, address));
         return person;
     }
@@ -46,18 +46,21 @@ public class DataController {
         Person person = personRepository.withNameAndAddressNamedQuery(name, address);
         return person;
     }
+
     @RequestMapping("/sort")
     public List<Person> sort() {
         List<Person> people = personRepository.findAll(new Sort(Sort.Direction.ASC, "age"));
         return people;
     }
+
     @RequestMapping("/page")
-    public Page<Person> page(int page,int size){
+    public Page<Person> page(int page, int size) {
         Page<Person> all = personRepository.findAll(new PageRequest(page, size));
         return all;
     }
+
     @RequestMapping("/all")
-    public List<Person> all(){
+    public List<Person> all() {
         return personRepository.findAll();
     }
 }

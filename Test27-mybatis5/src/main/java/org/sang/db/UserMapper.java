@@ -15,6 +15,7 @@ public interface UserMapper {
     public User getUser(Long id);
 
     public int insertUser(User user);
+
     public int insertUser2(User user);
 
     public int deleteUser(Long id);
@@ -22,7 +23,9 @@ public interface UserMapper {
     public ArrayList<User> getAll();
 
     public List<User> getUserByAddressAndName(@Param("username") String username, @Param("address") String address);
-    public ArrayList<User> getUserByAddressAndName2(Map<String,String> map);
+
+    public ArrayList<User> getUserByAddressAndName2(Map<String, String> map);
+
     public ArrayList<User> getUserByAddressAndName3(UserParams params);
 
     public int getCount();

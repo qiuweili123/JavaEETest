@@ -35,7 +35,7 @@ public class Province {
                 ", foods='" + foods + '\'' +
                 ", alias=" + alias +
                 ", cities=" + cities +
-                ", name=" + name+
+                ", name=" + name +
                 '}';
     }
 

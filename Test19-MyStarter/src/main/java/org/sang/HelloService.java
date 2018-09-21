@@ -5,7 +5,8 @@ package org.sang;
  */
 public class HelloService {
     private String msg;
-    public String sayHello(){
+
+    public String sayHello() {
         return "hello " + msg;
     }
 

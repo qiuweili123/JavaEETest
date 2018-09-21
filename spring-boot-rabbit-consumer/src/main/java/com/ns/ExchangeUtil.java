@@ -1,7 +1,5 @@
 package com.ns;
 
-import org.springframework.amqp.core.*;
-
 import java.util.Map;
 
 /**

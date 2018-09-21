@@ -28,21 +28,22 @@ public class LogAspect {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         Action action = method.getAnnotation(Action.class);
-        System.out.println("注解式拦截:"+action.name());
+        System.out.println("注解式拦截:" + action.name());
     }
 
     /**
      * 第一个星号表示返回类型，×表示所有类型，注意第一个星号和包名之间有空格
      * 后面的星号表示任意字符
      * 两个点表示任意个参数
-     *
+     * <p>
      * 参考  http://www.cnblogs.com/yansum/p/5898412.html
+     *
      * @param joinPoint
      */
     @Before("execution(* org.sang.MethodService.*(..))")
     public void before(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
-        System.out.println("方法规则式拦截："+method.getName());
+        System.out.println("方法规则式拦截：" + method.getName());
     }
 }

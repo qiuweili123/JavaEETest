@@ -8,6 +8,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 
 /**
  * 分区试验接收者
+ *
  * @author 翟永超
  * @create 2016/11/8.
  * @blog http://blog.didispace.com

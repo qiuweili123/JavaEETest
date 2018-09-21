@@ -28,14 +28,16 @@ public class PassportLisenerConfig3 extends AbsMqListenerConfig {
     public Binding binding() {
         return super.binding();
     }
- //只有建立不同的实例才能建立不同队列的消费
+
+    //只有建立不同的实例才能建立不同队列的消费
     @Bean("mesn1")
     //使用@RabbitListener必须使用对象接收，不建议手动ack
     public SimpleMessageListenerContainer messageContainer() {
         return super.messageContainer(AcknowledgeMode.MANUAL);
     }
+
     @Override
-   //@Bean
+    //@Bean
     protected ChannelAwareMessageListener getMessageListener() {
         return new ManuListener();
     }

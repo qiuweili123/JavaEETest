@@ -15,13 +15,13 @@ import org.springframework.context.annotation.ComponentScan;
 @RibbonClients(defaultConfiguration = {RibbonClientConfiguration.class, DefaultConfig.class})
 public class Application {
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(true).run(args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
 
-	@Bean
-	public AccessFilter accessFilter() {
-		return new AccessFilter();
-	}
+    @Bean
+    public AccessFilter accessFilter() {
+        return new AccessFilter();
+    }
 
 }

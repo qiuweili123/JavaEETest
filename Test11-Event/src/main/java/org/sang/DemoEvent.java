@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationEvent;
 /**
  * Created by sang on 16-12-13.
  */
-public class DemoEvent extends ApplicationEvent{
+public class DemoEvent extends ApplicationEvent {
     private String msg;
 
     public DemoEvent(Object source, String msg) {

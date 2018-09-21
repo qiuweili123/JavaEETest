@@ -3,9 +3,6 @@ package com.ns;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by lenovo on 2017/9/19.
@@ -33,7 +30,8 @@ public class PassportLisenerConfig2 {
 
         return connectionFactory;
     }
-   // @Bean
+
+    // @Bean
     public RabbitAdmin amqpAdmin() {
         return new RabbitAdmin(connectionFactory());
     }

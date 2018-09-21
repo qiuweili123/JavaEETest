@@ -3,7 +3,7 @@ package org.sang.bean;
 /**
  * Created by sang on 17-1-13.
  */
-public class User{
+public class User {
     private Long id;
     private String username;
     private String password;

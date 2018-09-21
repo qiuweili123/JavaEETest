@@ -59,6 +59,7 @@
         nptable: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
         table: /^ *\|(.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/
     });
+
     function Lexer(options) {
         this.tokens = [];
         this.tokens.links = {};
@@ -241,7 +242,7 @@
             }
             if (src) {
                 throw new
-                    Error('Infinite loop on byte: ' + src.charCodeAt(0));
+                Error('Infinite loop on byte: ' + src.charCodeAt(0));
             }
         }
         return this.tokens;
@@ -288,13 +289,14 @@
         br: replace(inline.br)('{2,}', '*')(),
         text: replace(inline.gfm.text)('{2,}', '*')()
     });
+
     function InlineLexer(links, options) {
         this.options = options || marked.defaults;
         this.links = links;
         this.rules = inline.normal;
         if (!this.links) {
             throw new
-                Error('Tokens array requires a `links` property.');
+            Error('Tokens array requires a `links` property.');
         }
         if (this.options.gfm) {
             if (this.options.breaks) {
@@ -409,7 +411,7 @@
             }
             if (src) {
                 throw new
-                    Error('Infinite loop on byte: ' + src.charCodeAt(0));
+                Error('Infinite loop on byte: ' + src.charCodeAt(0));
             }
         }
         return out;
@@ -420,8 +422,8 @@
                 + escape(link.href)
                 + '"'
                 + (link.title ? ' title="'
-                + escape(link.title)
-                + '"' : '')
+                    + escape(link.title)
+                    + '"' : '')
                 + '>'
                 + this.output(cap[1])
                 + '</a>';
@@ -432,8 +434,8 @@
                 + escape(cap[1])
                 + '"'
                 + (link.title ? ' title="'
-                + escape(link.title)
-                + '"' : '')
+                    + escape(link.title)
+                    + '"' : '')
                 + '>';
         }
     };
@@ -448,6 +450,7 @@
         }
         return out;
     };
+
     function Parser(options) {
         this.tokens = [];
         this.token = null;
@@ -510,9 +513,9 @@
                 }
                 return '<pre><code'
                     + (this.token.lang ? ' class="'
-                    + this.options.langPrefix
-                    + this.token.lang
-                    + '"' : '')
+                        + this.options.langPrefix
+                        + this.token.lang
+                        + '"' : '')
                     + '>'
                     + this.token.text
                     + '</code></pre>\n';
@@ -595,6 +598,7 @@
             }
         }
     };
+
     function escape(html, encode) {
         return html.replace(!encode ? /&(?!#?\w+;)/g : /&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     }
@@ -603,7 +607,7 @@
         regex = regex.source;
         opt = opt || '';
         return function self(name, val) {
-            if (!name)return new RegExp(regex, opt);
+            if (!name) return new RegExp(regex, opt);
             val = val.source || val;
             val = val.replace(/(^|[^\[])\^/g, '$1');
             regex = regex.replace(name, val);
@@ -615,6 +619,7 @@
     }
 
     noop.exec = noop;
+
     function merge(obj) {
         var i = 1, target, key;
         for (; i < arguments.length; i++) {
@@ -1096,10 +1101,10 @@ var prettyPrint;
         }
         if (options['regexLiterals']) {
             var REGEX_LITERAL = ('/(?=[^/*])'
-            + '(?:[^/\\x5B\\x5C]'
-            + '|\\x5C[\\s\\S]'
-            + '|\\x5B(?:[^\\x5C\\x5D]|\\x5C[\\s\\S])*(?:\\x5D|$))+'
-            + '/');
+                + '(?:[^/\\x5B\\x5C]'
+                + '|\\x5C[\\s\\S]'
+                + '|\\x5B(?:[^\\x5C\\x5D]|\\x5C[\\s\\S])*(?:\\x5D|$))+'
+                + '/');
             fallthroughStylePatterns.push(['lang-regex', new RegExp('^' + REGEXP_PRECEDER_PATTERN + '(' + REGEX_LITERAL + ')')]);
         }
         var types = options['types'];
@@ -1186,6 +1191,7 @@ var prettyPrint;
                     return;
                 }
             }
+
             function breakLeftOf(limit, copy) {
                 var rightSide = copy ? limit.cloneNode(false) : limit;
                 var parent = limit.parentNode;
@@ -1386,6 +1392,7 @@ var prettyPrint;
         'regexLiterals': true
     }), ['coffee']);
     registerLangHandler(createSimpleLexer([], [[PR_STRING, /^[\s\S]+/]]), ['regex']);
+
     function applyDecorator(job) {
         var opt_langExtension = job.langExtension;
         try {

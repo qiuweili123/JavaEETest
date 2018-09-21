@@ -12,6 +12,7 @@ public class TestConfig {
     public TestBean devTestBean() {
         return new TestBean("dev");
     }
+
     @Bean
     @Profile("prod")
     public TestBean prodTestBean() {

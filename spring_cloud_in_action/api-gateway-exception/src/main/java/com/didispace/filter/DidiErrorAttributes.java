@@ -13,8 +13,8 @@ import java.util.Map;
 public class DidiErrorAttributes extends DefaultErrorAttributes {
 
     @Override
-    public Map<String, Object> getErrorAttributes (
-            RequestAttributes requestAttributes, boolean includeStackTrace){
+    public Map<String, Object> getErrorAttributes(
+            RequestAttributes requestAttributes, boolean includeStackTrace) {
         Map<String, Object> result = super.getErrorAttributes(requestAttributes, includeStackTrace);
         result.remove("exception");
         return result;

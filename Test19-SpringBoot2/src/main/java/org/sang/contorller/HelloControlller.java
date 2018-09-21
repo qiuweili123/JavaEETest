@@ -20,8 +20,8 @@ public class HelloControlller {
 
     @RequestMapping("/hello")
     public String hello() {
-        counterService.increment(this.getClass().getName()+",method hello");
-        gaugeService.submit("hello",1);
+        counterService.increment(this.getClass().getName() + ",method hello");
+        gaugeService.submit("hello", 1);
         return "hello";
     }
 }

@@ -9,6 +9,7 @@ public class User6 {
     public void setUsername(String username) {
         this.username = username;
     }
+
     public void test() {
         System.out.println(username);
     }

@@ -15,7 +15,7 @@ public class WebSocketBrokerConfig extends AbstractWebSocketMessageBrokerConfigu
     @Override
     public void registerStompEndpoints(StompEndpointRegistry stompEndpointRegistry) {
         //必须加/ws/ 否则不行  此处为连接点信息
-             stompEndpointRegistry.addEndpoint("/ws/endpointSang").setAllowedOrigins("*").withSockJS();
+        stompEndpointRegistry.addEndpoint("/ws/endpointSang").setAllowedOrigins("*").withSockJS();
 
         //stompEndpointRegistry.addEndpoint("/endpointSang").setAllowedOrigins("*").withSockJS();
     }

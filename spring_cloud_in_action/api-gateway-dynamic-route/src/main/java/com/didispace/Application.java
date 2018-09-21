@@ -12,15 +12,15 @@ import org.springframework.context.annotation.Bean;
 @SpringCloudApplication
 public class Application {
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(true).run(args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
 
-	@Bean
-	@RefreshScope
-	@ConfigurationProperties("zuul")
-	public ZuulProperties zuulProperties() {
-		return new ZuulProperties();
-	}
+    @Bean
+    @RefreshScope
+    @ConfigurationProperties("zuul")
+    public ZuulProperties zuulProperties() {
+        return new ZuulProperties();
+    }
 
 }

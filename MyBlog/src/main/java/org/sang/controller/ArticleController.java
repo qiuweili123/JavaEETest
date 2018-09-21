@@ -15,7 +15,6 @@ import org.tautua.markdownpapers.parser.ParseException;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
 import java.util.List;
 
 /**
@@ -39,7 +38,7 @@ public class ArticleController {
     }
 
     @RequestMapping("/column/{displayName}/{category}")
-    public String column(@PathVariable("category") String category,Model model,@PathVariable("displayName") String displayName) {
+    public String column(@PathVariable("category") String category, Model model, @PathVariable("displayName") String displayName) {
         model.addAttribute("articles", articleService.getArticlesByCategoryName(category));
         model.addAttribute("displayName", displayName);
         return "views/columnPage";

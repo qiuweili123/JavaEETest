@@ -15,6 +15,7 @@ public class JSR250WayService {
     public JSR250WayService() {
         System.out.println("JSR250WayService-构造方法");
     }
+
     @PreDestroy//销毁之前执行
     public void destroy() {
         System.out.println("JSR250WayService-destroy()");

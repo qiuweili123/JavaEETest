@@ -3,8 +3,6 @@ package org.sang;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import java.lang.annotation.*;
-
 /**
  * Created by sang on 16-12-14.
  */

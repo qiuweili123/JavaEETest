@@ -27,6 +27,7 @@ public class ExceptionHandlerAdvice {
     public void addAttributes(Model model) {
         model.addAttribute("msg", "额外信息");
     }
+
     //忽略request的id，使用对象来接收参数的，参数中的id字段将会失效
     @InitBinder
     public void initBinder(WebDataBinder webDataBinder) {

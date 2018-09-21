@@ -14,6 +14,7 @@ public class MyConfig {
     public ListService windowListService() {
         return new WindowsListService();
     }
+
     @Bean
     @Conditional(LinuxCondition.class)
     public ListService linuxListService() {

@@ -16,10 +16,10 @@ import java.io.IOException;
 @Controller
 public class UploadController {
     @ResponseBody
-    @RequestMapping(value = "/upload",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
+    @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
     public String upload(MultipartFile file) {
         try {
-            FileUtils.writeByteArrayToFile(new File("/home/sang/workspace/"+file.getOriginalFilename()),file.getBytes());
+            FileUtils.writeByteArrayToFile(new File("/home/sang/workspace/" + file.getOriginalFilename()), file.getBytes());
             return "上传成功";
         } catch (IOException e) {
             e.printStackTrace();

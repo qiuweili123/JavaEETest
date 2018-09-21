@@ -34,16 +34,16 @@ public class GenericsUtils {
     public static Class getSuperClassGenricType(Class clazz, int index) {
         Type genType = clazz.getGenericSuperclass();
         if (!(genType instanceof ParameterizedType)) {
-           //log.warn(clazz.getSimpleName() + "'s superclass not ParameterizedType");
+            //log.warn(clazz.getSimpleName() + "'s superclass not ParameterizedType");
             return Object.class;
         }
         Type[] params = ((ParameterizedType) genType).getActualTypeArguments();
         if (index >= params.length || index < 0) {
-         //   log.warn("Index: " + index + ", Size of " + clazz.getSimpleName() + "'s Parameterized Type: " + params.length);
+            //   log.warn("Index: " + index + ", Size of " + clazz.getSimpleName() + "'s Parameterized Type: " + params.length);
             return Object.class;
         }
         if (!(params[index] instanceof Class)) {
-          //  log.warn(clazz.getSimpleName() + " not set the actual class on superclass generic parameter");
+            //  log.warn(clazz.getSimpleName() + " not set the actual class on superclass generic parameter");
             return Object.class;
         }
         return (Class) params[index];

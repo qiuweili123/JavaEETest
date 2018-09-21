@@ -29,7 +29,7 @@ public class ErrorExtFilter extends SendErrorFilter {
     public boolean shouldFilter() {
         RequestContext ctx = RequestContext.getCurrentContext();
         ZuulFilter failedFilter = (ZuulFilter) ctx.get("failed.filter");
-        if(failedFilter != null && failedFilter.filterType().equals("post")) {
+        if (failedFilter != null && failedFilter.filterType().equals("post")) {
             return true;
         }
         return false;

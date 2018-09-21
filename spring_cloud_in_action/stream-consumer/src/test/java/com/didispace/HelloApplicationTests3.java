@@ -17,13 +17,14 @@ import org.springframework.test.context.web.WebAppConfiguration;
 //@DirtiesContext
 public class HelloApplicationTests3 {
 
-	@Autowired @Qualifier("input")
-	private MessageChannel output;
+    @Autowired
+    @Qualifier("input")
+    private MessageChannel output;
 
-	@Test
-	public void contextLoads() {
-		Message<String> message = MessageBuilder.withPayload("{\"name\":\"didi\", \"age\":30}").build();
-		output.send(message);
-	}
+    @Test
+    public void contextLoads() {
+        Message<String> message = MessageBuilder.withPayload("{\"name\":\"didi\", \"age\":30}").build();
+        output.send(message);
+    }
 
 }

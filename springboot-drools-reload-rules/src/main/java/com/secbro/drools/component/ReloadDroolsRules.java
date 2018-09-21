@@ -1,21 +1,16 @@
 package com.secbro.drools.component;
 
 import com.secbro.drools.utils.KieUtils;
-import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.builder.KieBuilder;
 import org.kie.api.builder.KieFileSystem;
 import org.kie.api.builder.Message;
 import org.kie.api.builder.Results;
-import org.kie.api.io.Resource;
 import org.kie.api.io.ResourceType;
 import org.kie.api.runtime.KieContainer;
-import org.kie.internal.io.ResourceFactory;
 import org.kie.internal.utils.KieHelper;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -53,7 +48,7 @@ public class ReloadDroolsRules {
     public void reloadByHelper() throws UnsupportedEncodingException {
 
         KieHelper kieHelper = new KieHelper();
-        kieHelper.addContent(loadRules(),ResourceType.DRL);
+        kieHelper.addContent(loadRules(), ResourceType.DRL);
 
         Results results = kieHelper.verify();
         if (results.hasMessages(Message.Level.ERROR)) {

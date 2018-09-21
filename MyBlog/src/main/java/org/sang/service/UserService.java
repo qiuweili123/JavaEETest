@@ -18,7 +18,7 @@ public class UserService {
         User user = userDao.getUser(username, password);
         if (user == null) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }

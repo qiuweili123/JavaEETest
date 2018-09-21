@@ -31,10 +31,10 @@ public class AccessFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
 
-      	log.info("send {} request to {}", request.getMethod(), request.getRequestURL().toString());
+        log.info("send {} request to {}", request.getMethod(), request.getRequestURL().toString());
 
         Object accessToken = request.getParameter("accessToken");
-        if(accessToken == null) {
+        if (accessToken == null) {
             log.warn("access token is empty");
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);

@@ -15,26 +15,26 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Application {
 
-	@FeignClient("eureka-feign-client")
-	interface HelloServiceClient extends HelloService {
+    @FeignClient("eureka-feign-client")
+    interface HelloServiceClient extends HelloService {
 
-	}
+    }
 
-	@RestController
-	class TestController {
+    @RestController
+    class TestController {
 
-		@Autowired
-		private HelloServiceClient helloServiceClient;
+        @Autowired
+        private HelloServiceClient helloServiceClient;
 
-		@GetMapping("/test")
-		public String test(String name) {
-			return helloServiceClient.hello(name);
-		}
+        @GetMapping("/test")
+        public String test(String name) {
+            return helloServiceClient.hello(name);
+        }
 
-	}
+    }
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(true).run(args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
 
 }

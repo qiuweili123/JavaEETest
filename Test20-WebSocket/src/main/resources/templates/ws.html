@@ -26,6 +26,7 @@
 </div>
 <script type="text/javascript">
     var stompClient = null;
+
     function setConnected(connected) {
         console.log("##connected" + connected);
         document.getElementById("connect").disabled = connected;
@@ -35,6 +36,7 @@
 //        $("#disconnect").disabled = !connected;
         $("#response").html();
     }
+
     function connect() {
         //   var socket = new SockJS('http://localhost:8080/endpointSang');
         var socket = new SockJS('http://localhost:8080/ws/endpointSang');
@@ -49,6 +51,7 @@
             })
         });
     }
+
     function disconnect() {
         if (stompClient != null) {
             stompClient.disconnect();
@@ -56,11 +59,13 @@
         setConnected(false);
         console.log('Disconnected');
     }
+
     function sendName() {
         var name = $('#name').val();
         console.log('name:' + name);
         stompClient.send("/ws/welcome", {}, JSON.stringify({'name': name}));
     }
+
     function showResponse(message) {
         $("#response").html(message);
     }

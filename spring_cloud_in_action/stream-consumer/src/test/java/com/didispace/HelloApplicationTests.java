@@ -16,21 +16,21 @@ import org.springframework.test.context.web.WebAppConfiguration;
 //@DirtiesContext
 public class HelloApplicationTests {
 
-	@Autowired
-	private SinkSender sinkSender;
+    @Autowired
+    private SinkSender sinkSender;
 
-	@Test
-	public void contextLoads() {
-		sinkSender.output().send(MessageBuilder.withPayload("From SinkSender").build());
-	}
+    @Test
+    public void contextLoads() {
+        sinkSender.output().send(MessageBuilder.withPayload("From SinkSender").build());
+    }
 
-	public interface SinkSender {
+    public interface SinkSender {
 
-		String OUTPUT = "input";
+        String OUTPUT = "input";
 
-		@Output(SinkSender.OUTPUT)
-		MessageChannel output();
+        @Output(SinkSender.OUTPUT)
+        MessageChannel output();
 
-	}
+    }
 
 }

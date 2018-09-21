@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 @Api(value = "/test", tags = "测试接口模块")
 @RestController
@@ -29,11 +30,14 @@ public class UserController {
    /* @Resource
     private UserDao userDao;*/
 
-    @GetMapping("/getById")
+    @RequestMapping("/getById")
     public Object getById(long id) {
         //userDao.getName();
+        System.out.println("##tmp::"+System.getProperty("java.io.tmpdir"));
 
         APP_LOGGER.info("id=4444===44=" + (id % 2));
+
+        APP_LOGGER.info("sleep end");
         User user;
         if ((id % 2) == 0) {
             user = userInfoMapper.selectByEvenUserId(id);

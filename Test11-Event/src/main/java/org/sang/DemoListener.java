@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoListener implements ApplicationListener<DemoEvent> {
     public void onApplicationEvent(DemoEvent demoEvent) {
-        System.out.println("我收到DemoEvent的事件了:"+demoEvent.getMsg());
+        System.out.println("我收到DemoEvent的事件了:" + demoEvent.getMsg());
     }
 }

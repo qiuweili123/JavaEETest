@@ -13,7 +13,7 @@ public class LoginInterceptors implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         httpServletRequest.setCharacterEncoding("UTF-8");
         StringBuffer requestURL = httpServletRequest.getRequestURL();
-        if (requestURL.toString().contains("sang")&&!requestURL.toString().contains("sang/login")&&!requestURL.toString().contains("sang/dologin")) {
+        if (requestURL.toString().contains("sang") && !requestURL.toString().contains("sang/login") && !requestURL.toString().contains("sang/dologin")) {
             Object user = httpServletRequest.getSession().getAttribute("user");
             if (user == null) {
                 httpServletResponse.sendRedirect("/sang/login");
@@ -21,7 +21,7 @@ public class LoginInterceptors implements HandlerInterceptor {
             } else {
                 return true;
             }
-        }else{
+        } else {
             return true;
         }
     }

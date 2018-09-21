@@ -26,12 +26,15 @@
     stomp.connect('guest', 'guest', function (frame) {
         stomp.subscribe("/user/queue/notifications", handleNotification);
     });
+
     function handleNotification(message) {
         $("#output").append("<b>Received： " + message.body + "</b><br/>")
     }
+
     function sendSpittle(text) {
         stomp.send("/chat", {}, text);
     }
+
     $("#stop").click(function () {
         sock.close();
     });

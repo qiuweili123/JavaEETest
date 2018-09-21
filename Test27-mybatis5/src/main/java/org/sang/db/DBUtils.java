@@ -63,7 +63,7 @@ public class DBUtils {
         }
         synchronized (CLASS_LOCK) {
             if (sqlSessionFactory == null) {
-                sqlSessionFactory = new SqlSessionFactoryBuilder().build(cfgReader,properties);
+                sqlSessionFactory = new SqlSessionFactoryBuilder().build(cfgReader, properties);
             }
         }
         return sqlSessionFactory;

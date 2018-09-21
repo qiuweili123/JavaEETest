@@ -14,6 +14,6 @@ public interface UserMapper {
 
     public int deleteUser(Long id);
 
-//    @Select("select * from user")
+    //    @Select("select * from user")
     public List<User> getAll();
 }

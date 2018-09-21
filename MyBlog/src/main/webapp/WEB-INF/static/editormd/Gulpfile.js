@@ -92,7 +92,7 @@ gulp.task("js", function () {
         .pipe(gulp.dest("./"))
         .pipe(header(headerMiniComment, {
             pkg: pkg, fileName: function (file) {
-                var name = file.path.split(file.base + ( (os.platform() === "win32") ? "\\" : "/"));
+                var name = file.path.split(file.base + ((os.platform() === "win32") ? "\\" : "/"));
                 return name[1].replace(/[\\\/]?/, "");
             }
         }))
@@ -198,7 +198,7 @@ gulp.task("amd", function () {
         .pipe(gulp.dest("./"))
         .pipe(header(headerMiniComment, {
             pkg: pkg, fileName: function (file) {
-                var name = file.path.split(file.base + ( (os.platform() === "win32") ? "\\" : "/"));
+                var name = file.path.split(file.base + ((os.platform() === "win32") ? "\\" : "/"));
                 return name[1].replace(/[\\\/]?/, "");
             }
         }))

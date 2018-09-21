@@ -162,7 +162,7 @@ public class RestClientTest {
 
     public static void testQurey() {
 
-      /*  commands.add(cmdFactory.newInsert(applicant, "applicant1"));*//*
+        /*  commands.add(cmdFactory.newInsert(applicant, "applicant1"));*//*
         QueryCommand queryCommand = new QueryCommand();
         queryCommand.setName("person");
         commands.add(queryCommand);*/

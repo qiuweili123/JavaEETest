@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
  * Created by sang on 16-12-13.
  */
 @Component
-public class DemoPublish{
+public class DemoPublish {
     @Autowired
     ApplicationContext applicationContext;
 
     public void publish(String msg) {
-        applicationContext.publishEvent(new DemoEvent(this,msg));
+        applicationContext.publishEvent(new DemoEvent(this, msg));
     }
 }

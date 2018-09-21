@@ -2,7 +2,6 @@ package org.sang;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -17,9 +16,10 @@ public class WsController {
         System.out.println(message.getName());
         return new ResponseMessage("welcome," + message.getName() + " !");
     }
-  // @SubscribeMapping("/init")
-    public String init(){
-       System.out.println("##############init#############");
+
+    // @SubscribeMapping("/init")
+    public String init() {
+        System.out.println("##############init#############");
         return "init";
     }
 }

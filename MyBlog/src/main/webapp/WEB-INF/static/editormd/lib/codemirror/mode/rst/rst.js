@@ -540,7 +540,7 @@
             innerMode: function (state) {
                 return state.tmp ? {state: state.tmp.local, mode: state.tmp.mode}
                     : state.ctx.mode ? {state: state.ctx.local, mode: state.ctx.mode}
-                    : null;
+                        : null;
             },
 
             token: function (stream, state) {

@@ -9,7 +9,7 @@
  -->
 
     <springProperty scope="context" name="logName" source="spring.application.name" defaultValue="app"/>
-    <springProperty scope="context" name="logPath" source="logging.path" defaultValue="java.io.tmpdir"/>
+    <springProperty scope="context" name="logPath" source="logging.path" defaultValue="${java.io.tmpdir}"/>
 
 
     <property name="PATTERN" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>
@@ -78,8 +78,8 @@
     <logger name="dao" level="${log.sql.level}"/>
 
     <logger name="app" level="info">
-        <appender-ref ref="APP"/>
-       <!-- <appender-ref ref="ASYN_APP"/>-->
+        <!-- <appender-ref ref="APP"/>-->
+       <appender-ref ref="ASYN_APP"/>
     </logger>
 
     <logger name="rpc" level="info">

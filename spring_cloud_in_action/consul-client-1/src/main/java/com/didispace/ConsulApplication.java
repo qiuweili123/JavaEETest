@@ -19,25 +19,25 @@ import java.util.List;
 @SpringBootApplication
 public class ConsulApplication {
 
-	private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
-	@Autowired
-	private DiscoveryClient discoveryClient;
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-	public String hello() {
-		for(String service : discoveryClient.getServices()) {
-			logger.info("service : " + service);
-			List<ServiceInstance> list = discoveryClient.getInstances(service);
-			for (ServiceInstance serviceInstance : list) {
-				logger.info("====：" + serviceInstance.getUri() + ", " + serviceInstance.getMetadata());
-			}
-		}
-		return "hello-1";
-	}
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello() {
+        for (String service : discoveryClient.getServices()) {
+            logger.info("service : " + service);
+            List<ServiceInstance> list = discoveryClient.getInstances(service);
+            for (ServiceInstance serviceInstance : list) {
+                logger.info("====：" + serviceInstance.getUri() + ", " + serviceInstance.getMetadata());
+            }
+        }
+        return "hello-1";
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(ConsulApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ConsulApplication.class, args);
+    }
 
 }

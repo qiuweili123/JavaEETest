@@ -17,15 +17,15 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 @WebAppConfiguration
 public class ApplicationTests {
 
-	private MockMvc mvc;
+    private MockMvc mvc;
 
-	@Before
-	public void setUp() throws Exception {
-		mvc = MockMvcBuilders.standaloneSetup(new ComputeController()).build();
-	}
+    @Before
+    public void setUp() throws Exception {
+        mvc = MockMvcBuilders.standaloneSetup(new ComputeController()).build();
+    }
 
-	@Test
-	public void getHello() throws Exception {
-	}
+    @Test
+    public void getHello() throws Exception {
+    }
 
 }

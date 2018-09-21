@@ -3,7 +3,7 @@ package org.sang.bean;
 /**
  * Created by sang on 17-1-17.
  */
-public class Noodle extends Food{
+public class Noodle extends Food {
     //每天吃几次
     private int price;
 
@@ -11,7 +11,7 @@ public class Noodle extends Food{
     public String toString() {
         return "Noodle{" +
                 "price=" + price +
-                ",name="+name+"}";
+                ",name=" + name + "}";
     }
 
     public int getPrice() {

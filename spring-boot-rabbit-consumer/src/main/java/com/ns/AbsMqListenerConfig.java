@@ -86,6 +86,7 @@ public abstract class AbsMqListenerConfig extends AbsNsMqConfig implements Rabbi
     public SimpleMessageListenerContainer messageContainer() {
         return messageContainer(AcknowledgeMode.AUTO);
     }
+
     //  @Bean
     public SimpleMessageListenerContainer messageContainer(AcknowledgeMode acknowledgeMode) {
         return messageContainer(connectionFactory, acknowledgeMode);

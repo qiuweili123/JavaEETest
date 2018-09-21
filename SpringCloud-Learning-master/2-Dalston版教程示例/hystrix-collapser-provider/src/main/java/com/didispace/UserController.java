@@ -1,7 +1,6 @@
 package com.didispace;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,8 +36,8 @@ public class UserController {
     public List<String> findByIds(@RequestParam String ids) {
         log.info("findByIds : " + ids);
         List<String> result = new ArrayList<>();
-        for(String id : ids.split(",")) {
-            if(users.get(Long.valueOf(id)) != null)
+        for (String id : ids.split(",")) {
+            if (users.get(Long.valueOf(id)) != null)
                 result.add(users.get(Long.valueOf(id)));
         }
 

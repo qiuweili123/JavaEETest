@@ -11,6 +11,7 @@ public class BeanWayService {
     public BeanWayService() {
         System.out.println("BeanWayService-构造方法");
     }
+
     public void destroy() {
         System.out.println("BeanWayService-destroy()");
     }

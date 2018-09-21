@@ -1311,7 +1311,8 @@
             // Move the hidden textarea near the cursor to prevent scrolling artifacts
             if (cm.options.moveInputWithCursor) {
                 var headPos = cursorCoords(cm, doc.sel.primary().head, "div");
-                var wrapOff = display.wrapper.getBoundingClientRect(), lineOff = display.lineDiv.getBoundingClientRect();
+                var wrapOff = display.wrapper.getBoundingClientRect(),
+                    lineOff = display.lineDiv.getBoundingClientRect();
                 result.teTop = Math.max(0, Math.min(display.wrapper.clientHeight - 10,
                     headPos.top + lineOff.top - wrapOff.top));
                 result.teLeft = Math.max(0, Math.min(display.wrapper.clientWidth - 10,
@@ -1399,6 +1400,7 @@
         fastPoll: function () {
             var missed = false, input = this;
             input.pollingFast = true;
+
             function p() {
                 var changed = input.poll();
                 if (!changed && !missed) {
@@ -2887,6 +2889,7 @@
     function cursorCoords(cm, pos, context, lineObj, preparedMeasure, varHeight) {
         lineObj = lineObj || getLine(cm.doc, pos.line);
         if (!preparedMeasure) preparedMeasure = prepareMeasureForLine(cm, lineObj);
+
         function get(ch, right) {
             var m = measureCharPrepared(cm, preparedMeasure, ch, right ? "right" : "left", varHeight);
             if (right) m.left = m.right; else m.right = m.left;
@@ -3013,6 +3016,7 @@
     }
 
     var measureText;
+
     // Compute the default text height.
     function textHeight(display) {
         if (display.cachedTextHeight != null) return display.cachedTextHeight;
@@ -3055,6 +3059,7 @@
     var operationGroup = null;
 
     var nextOpId = 0;
+
     // Start a new operation.
     function startOperation(cm) {
         cm.curOp = {
@@ -3138,7 +3143,7 @@
 
         op.mustUpdate = op.viewChanged || op.forceUpdate || op.scrollTop != null ||
             op.scrollToPos && (op.scrollToPos.from.line < display.viewFrom ||
-            op.scrollToPos.to.line >= display.viewTo) ||
+                op.scrollToPos.to.line >= display.viewTo) ||
             display.maxLineChanged && cm.options.lineWrapping;
         op.update = op.mustUpdate &&
             new DisplayUpdate(cm, op.mustUpdate && {top: op.scrollTop, ensure: op.scrollToPos}, op.forceUpdate);
@@ -3520,6 +3525,7 @@
                 prevTouch.end = +new Date;
             }
         };
+
         function isMouseLikeTouchEvent(e) {
             if (e.touches.length != 1) return false;
             var touch = e.touches[0];
@@ -4945,8 +4951,8 @@
                 var cur = lineObj.text.charAt(ch) || "\n";
                 var type = isWordChar(cur, helper) ? "w"
                     : group && cur == "\n" ? "n"
-                    : !group || /\s/.test(cur) ? null
-                    : "p";
+                        : !group || /\s/.test(cur) ? null
+                            : "p";
                 if (group && !first && !type) type = "s";
                 if (sawType && sawType != type) {
                     if (dir < 0) {
@@ -5361,14 +5367,14 @@
                 var startChar = line.charAt(start);
                 var check = isWordChar(startChar, helper)
                     ? function (ch) {
-                    return isWordChar(ch, helper);
-                }
+                        return isWordChar(ch, helper);
+                    }
                     : /\s/.test(startChar) ? function (ch) {
-                    return /\s/.test(ch);
-                }
-                    : function (ch) {
-                    return !/\s/.test(ch) && !isWordChar(ch);
-                };
+                            return /\s/.test(ch);
+                        }
+                        : function (ch) {
+                            return !/\s/.test(ch) && !isWordChar(ch);
+                        };
                 while (start > 0 && check(line.charAt(start - 1))) --start;
                 while (end < line.length && check(line.charAt(end))) ++end;
             }
@@ -7921,7 +7927,7 @@
             return changeLine(this, handle, where == "gutter" ? "gutter" : "class", function (line) {
                 var prop = where == "text" ? "textClass"
                     : where == "background" ? "bgClass"
-                    : where == "gutter" ? "gutterClass" : "wrapClass";
+                        : where == "gutter" ? "gutterClass" : "wrapClass";
                 if (!line[prop]) line[prop] = cls;
                 else if (classTest(cls).test(line[prop])) return false;
                 else line[prop] += " " + cls;
@@ -7932,7 +7938,7 @@
             return changeLine(this, handle, where == "gutter" ? "gutter" : "class", function (line) {
                 var prop = where == "text" ? "textClass"
                     : where == "background" ? "bgClass"
-                    : where == "gutter" ? "gutterClass" : "wrapClass";
+                        : where == "gutter" ? "gutterClass" : "wrapClass";
                 var cur = line[prop];
                 if (!cur) return false;
                 else if (cls == null) line[prop] = null;
@@ -8305,7 +8311,7 @@
         if ((hist.lastOp == opId ||
             hist.lastOrigin == change.origin && change.origin &&
             ((change.origin.charAt(0) == "+" && doc.cm && hist.lastModTime > time - doc.cm.options.historyEventDelay) ||
-            change.origin.charAt(0) == "*")) &&
+                change.origin.charAt(0) == "*")) &&
             (cur = lastChangeEvent(hist, hist.lastOp == opId))) {
             // Merge this change into the last event
             var last = lst(cur.changes);
@@ -8363,8 +8369,8 @@
         // merged when similar and close together in time.
         if (opId == hist.lastSelOp ||
             (origin && hist.lastSelOrigin == origin &&
-            (hist.lastModTime == hist.lastSelTime && hist.lastOrigin == origin ||
-            selectionEventCanBeMerged(doc, origin, lst(hist.done), sel))))
+                (hist.lastModTime == hist.lastSelTime && hist.lastOrigin == origin ||
+                    selectionEventCanBeMerged(doc, origin, lst(hist.done), sel))))
             hist.done[hist.done.length - 1] = sel;
         else
             pushSelectionToHistory(sel, hist.done);
@@ -8593,6 +8599,7 @@
             list = orphanDelayedCallbacks = [];
             setTimeout(fireOrphanDelayed, 0);
         }
+
         function bnd(f) {
             return function () {
                 f.apply(null, args);

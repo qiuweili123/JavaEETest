@@ -70,6 +70,7 @@ public class Main {
             }
         }
     }
+
     @Test
     public void test4() {
         SqlSession sqlSession = null;

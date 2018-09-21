@@ -20,7 +20,7 @@ public class PassportLisenerConfig extends AbsMqListenerConfig {
     }
 
     @Override
-  //  @Bean
+    //  @Bean
     protected ChannelAwareMessageListener getMessageListener() {
         return new AutoMqListener();
     }

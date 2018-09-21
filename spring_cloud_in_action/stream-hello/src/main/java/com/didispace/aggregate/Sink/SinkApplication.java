@@ -13,7 +13,7 @@ public class SinkApplication {
 
     private static Logger logger = LoggerFactory.getLogger(SinkApplication.class);
 
-    @ServiceActivator(inputChannel=Sink.INPUT)
+    @ServiceActivator(inputChannel = Sink.INPUT)
     public void loggerSink(Object payload) {
         logger.info("Received: " + payload);
     }

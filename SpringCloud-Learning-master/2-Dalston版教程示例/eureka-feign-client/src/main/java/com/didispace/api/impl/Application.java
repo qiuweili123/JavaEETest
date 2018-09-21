@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Application {
 
-	@RestController
-	class HelloController implements HelloService {
+    @RestController
+    class HelloController implements HelloService {
 
-		@Override
-		public String hello(String name) {
-			return "hello " + name;
-		}
+        @Override
+        public String hello(String name) {
+            return "hello " + name;
+        }
 
-	}
+    }
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(true).run(args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
 
 }

@@ -55,7 +55,8 @@
         };
 
         unmarshallSingle = function (data) {
-            var body, chr, command, divider, headerLines, headers, i, idx, len, line, start, trim, _i, _j, _len, _ref, _ref1;
+            var body, chr, command, divider, headerLines, headers, i, idx, len, line, start, trim, _i, _j, _len, _ref,
+                _ref1;
             divider = data.search(RegExp("" + Byte.LF + Byte.LF));
             headerLines = data.substring(0, divider).split(Byte.LF);
             command = headerLines.shift();
@@ -253,7 +254,8 @@
             }
             this.ws.onmessage = (function (_this) {
                 return function (evt) {
-                    var arr, c, client, data, frame, messageID, onreceive, subscription, unmarshalledData, _i, _len, _ref, _results;
+                    var arr, c, client, data, frame, messageID, onreceive, subscription, unmarshalledData, _i, _len,
+                        _ref, _results;
                     data = typeof ArrayBuffer !== 'undefined' && evt.data instanceof ArrayBuffer ? (arr = new Uint8Array(evt.data), typeof _this.debug === "function" ? _this.debug("--- got data length: " + arr.length) : void 0, ((function () {
                         var _i, _len, _results;
                         _results = [];

@@ -37,10 +37,10 @@ public class CollapserTest {
         log.info(u4.get().toString());
 
 
-        Assert.assertEquals("aaa",u1.get());
-        Assert.assertEquals("bbb",u2.get());
-        Assert.assertEquals("ccc",u3.get());
-        Assert.assertEquals("ddd",u4.get());
+        Assert.assertEquals("aaa", u1.get());
+        Assert.assertEquals("bbb", u2.get());
+        Assert.assertEquals("ccc", u3.get());
+        Assert.assertEquals("ddd", u4.get());
     }
 
 }

@@ -9,11 +9,12 @@ import org.springframework.stereotype.Controller;
 //@Service//效果等同于如下几种
 //    @Component
 //    @Repository
-    @Controller
+@Controller
 public class UseFunctionService {
-//    @Resource
+    //    @Resource
     @Autowired
     FunctionService functionService;
+
     public String sayHello(String word) {
         return functionService.sayHello(word);
     }

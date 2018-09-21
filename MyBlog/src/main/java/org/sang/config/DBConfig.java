@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Configuration
 @Component
-@PropertySource(value = "classpath:jdbc.properties",encoding = "UTF-8")
+@PropertySource(value = "classpath:jdbc.properties", encoding = "UTF-8")
 public class DBConfig {
     @Value("${db.driverClass}")
     public String driver;

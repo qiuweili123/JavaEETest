@@ -144,13 +144,13 @@
                     var word = stream.current();
                     style = keywords.propertyIsEnumerable(stream.current()) ? "keyword"
                         : operators.propertyIsEnumerable(stream.current()) ? "operator"
-                        : /^[A-Z][A-Z_0-9]*$/g.test(word) ? "tag"
-                        : /^0[bB][0-1]+$/g.test(word) ? "number"
-                        : /^0[cC][0-7]+$/g.test(word) ? "number"
-                        : /^0[xX][a-fA-F0-9]+$/g.test(word) ? "number"
-                        : /^([0-9]+\.[0-9]*)|([0-9]*\.[0-9]+)$/g.test(word) ? "number"
-                        : /^[0-9]+$/g.test(word) ? "number"
-                        : "variable";
+                            : /^[A-Z][A-Z_0-9]*$/g.test(word) ? "tag"
+                                : /^0[bB][0-1]+$/g.test(word) ? "number"
+                                    : /^0[cC][0-7]+$/g.test(word) ? "number"
+                                        : /^0[xX][a-fA-F0-9]+$/g.test(word) ? "number"
+                                            : /^([0-9]+\.[0-9]*)|([0-9]*\.[0-9]+)$/g.test(word) ? "number"
+                                                : /^[0-9]+$/g.test(word) ? "number"
+                                                    : "variable";
                 }
                 return style;
             },

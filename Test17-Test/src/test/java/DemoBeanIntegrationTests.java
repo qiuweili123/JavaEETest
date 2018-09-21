@@ -15,10 +15,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class DemoBeanIntegrationTests {
     @Autowired
     private TestBean testBean;
+
     @Test
     public void prodBeanShouldInject() {
         String content = testBean.getContent();
-        Assert.assertEquals("dev",content);
+        Assert.assertEquals("dev", content);
     }
 
 }

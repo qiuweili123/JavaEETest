@@ -11,7 +11,7 @@ public class Rice extends Food {
     public String toString() {
         return "Rice{" +
                 "way='" + way + '\'' +
-                ",name="+name+"}";
+                ",name=" + name + "}";
     }
 
     public String getWay() {

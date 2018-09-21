@@ -13,14 +13,14 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 public class RibbonApplication {
 
-	@Bean
-	@LoadBalanced
-	RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(RibbonApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(RibbonApplication.class, args);
+    }
 
 }

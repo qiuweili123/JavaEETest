@@ -36,7 +36,7 @@ public class DBUtils {
     }
 
     public static SqlSession openSqlSession() {
-        if(sqlSessionFactory==null)
+        if (sqlSessionFactory == null)
             initSqlSessionFactory();
         return sqlSessionFactory.openSession();
     }

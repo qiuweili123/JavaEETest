@@ -17,27 +17,27 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class TraceApplication {
 
-	private final Logger logger = Logger.getLogger(getClass());
+    private final Logger logger = Logger.getLogger(getClass());
 
-	@Bean
-	public AlwaysSampler defaultSampler() {
-		return new AlwaysSampler();
-	}
+    @Bean
+    public AlwaysSampler defaultSampler() {
+        return new AlwaysSampler();
+    }
 
-	@Bean
-	@LoadBalanced
-	RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
-	@RequestMapping(value = "/trace-1", method = RequestMethod.GET)
-	public String trace() {
-		logger.info("===<call trace-1>===");
-		return restTemplate().getForEntity("http://trace-2/trace-2", String.class).getBody();
-	}
+    @RequestMapping(value = "/trace-1", method = RequestMethod.GET)
+    public String trace() {
+        logger.info("===<call trace-1>===");
+        return restTemplate().getForEntity("http://trace-2/trace-2", String.class).getBody();
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(TraceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TraceApplication.class, args);
+    }
 
 }

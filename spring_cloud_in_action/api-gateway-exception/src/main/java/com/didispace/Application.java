@@ -13,14 +13,14 @@ import org.springframework.context.annotation.Bean;
 @SpringCloudApplication
 public class Application {
 
-	public static void main(String[] args) {
-		FilterProcessor.setProcessor(new DidiFilterProcessor());
-		new SpringApplicationBuilder(Application.class).web(true).run(args);
-	}
+    public static void main(String[] args) {
+        FilterProcessor.setProcessor(new DidiFilterProcessor());
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
 
-	@Bean
-	public DefaultErrorAttributes errorAttributes() {
-		return new DidiErrorAttributes();
-	}
+    @Bean
+    public DefaultErrorAttributes errorAttributes() {
+        return new DidiErrorAttributes();
+    }
 
 }

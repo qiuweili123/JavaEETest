@@ -25,16 +25,16 @@
         <drools.version>7.5.0.Final</drools.version>
     </properties>
     <dependencies>
-       <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>jackson-databind</artifactId>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-web</artifactId>
+             <exclusions>
+                 <exclusion>
+                     <artifactId>jackson-databind</artifactId>
+                     <groupId>com.fasterxml.jackson.core</groupId>
+                 </exclusion>
+             </exclusions>
+         </dependency>-->
 
         <dependency>
             <groupId>org.kie</groupId>
@@ -120,21 +120,21 @@
             <artifactId>kie-ci</artifactId>
             <version>${drools.version}</version>
         </dependency>
-<!--
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>1.2.3.RELEASE</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>jackson-core</artifactId>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jackson-databind</artifactId>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>-->
+        <!--
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-actuator</artifactId>
+                    <version>1.2.3.RELEASE</version>
+                    <exclusions>
+                        <exclusion>
+                            <artifactId>jackson-core</artifactId>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                        </exclusion>
+                        <exclusion>
+                            <artifactId>jackson-databind</artifactId>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>-->
     </dependencies>
 </project>
