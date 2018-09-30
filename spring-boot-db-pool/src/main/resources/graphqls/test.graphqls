@@ -1,0 +1,10 @@
+type User{
+   id: Long!
+   userName: String!
+}
+
+extend type Query{
+  getUsers(id:Long!): [User]
+}
+
+

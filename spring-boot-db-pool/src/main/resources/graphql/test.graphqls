@@ -1,8 +1,0 @@
-type User{
-   id: Long!
-   userName: String!
-}
-
-type Query{
-  getUsers(user:User!): [User!]!
-}

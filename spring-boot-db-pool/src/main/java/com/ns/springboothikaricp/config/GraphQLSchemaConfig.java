@@ -15,7 +15,7 @@ import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
 public class GraphQLSchemaConfig {
     @Bean
     public GraphQLSchema schema() {
-        String schema = "type Query {hello: String}";
+        String schema = "type Query{version:String!} extend type Query {hello: String}";
 
         SchemaParser schemaParser = new SchemaParser();
         TypeDefinitionRegistry typeDefinitionRegistry = schemaParser.parse(schema);
