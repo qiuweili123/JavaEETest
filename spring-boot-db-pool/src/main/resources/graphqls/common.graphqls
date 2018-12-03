@@ -17,6 +17,10 @@
 
 
 #Root node
+schema {
+    query: Query
+}
+
 type Query {
     version: String
 }

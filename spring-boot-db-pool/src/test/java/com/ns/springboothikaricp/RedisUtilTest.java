@@ -6,6 +6,7 @@ import com.ns.springboothikaricp.dao.JsonRedisDao;
 import com.ns.springboothikaricp.dao.StringRedisDao;
 import com.ns.springboothikaricp.util.RedisCacheUtil;
 import org.junit.Test;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.annotation.Resource;
 
@@ -22,7 +23,9 @@ public class RedisUtilTest extends ApplicationTests {
     private JsonRedisDao jsonRedisDao;
 
     @Resource
+    private RedisTemplate redisTemplate;
 
+    @Resource
     private RedisCacheUtil redisCacheUtil;
 
 
@@ -56,5 +59,17 @@ public class RedisUtilTest extends ApplicationTests {
 
     }
 
+ @Test
+  public void testSerlizer(){
+    String key="stock:res:00020140107162747992Ce5uBuxW06D6";
 
+     jdkRedisDao.set(key,123);
+      stringRedisDao.set(key,456);
+     redisTemplate.opsForValue().set("1"+key,356);
+
+     stringRedisDao.incr(key,1L);
+
+      System.out.println("jdk getKey::"+jdkRedisDao.get(key));
+      System.out.println("string getKey::"+stringRedisDao.get(key));
+  }
 }

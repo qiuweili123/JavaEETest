@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
+import java.util.List;
 
 @ApiModel(description = "用户表信息")
 public class User {
@@ -21,6 +22,8 @@ public class User {
     private Date addTime;
     @ApiModelProperty("备注")
     private String remarks;
+
+    private List<Product> products;
 
     public Integer getId() {
         return id;
@@ -69,4 +72,13 @@ public class User {
     public void setRemarks(String remarks) {
         this.remarks = remarks;
     }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
 }

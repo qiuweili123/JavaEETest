@@ -1,0 +1,32 @@
+
+type Product{
+    #id主键
+    id: Long!
+    #商品名称
+    name: String!
+    #商品编码
+    code: String! @deprecated(reason: "Not worth referencing")
+}
+#登录用户
+type User{
+    #id主键
+    id: Long!
+    #用户姓名
+    userName: String!
+    #用户地址
+    address: String! @deprecated(reason: "Not worth referencing")
+    #商品列表
+    products: [Product]
+}
+
+
+#  利用 extend type 的 feature 可以实现简单的模块化划分
+extend type Query{
+  getUsers(ids:[Long]!): [User]
+
+  findAllUsers: [User]
+   user(id:Long!): User
+   getProducts(userId:Long!): [Product]!
+}
+
+

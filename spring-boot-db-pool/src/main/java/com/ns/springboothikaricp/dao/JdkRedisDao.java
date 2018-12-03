@@ -16,4 +16,9 @@ public class JdkRedisDao extends AbsRedisDao {
     protected RedisTemplate getRedisTemplate() {
         return jdkRedisTemplate;
     }
+
+    public long incr(final String key, long incBy) {
+        return getRedisTemplate().opsForValue().increment(key, incBy);
+
+    }
 }

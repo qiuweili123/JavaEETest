@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
 
-@Configuration
+//@Configuration
 public class GraphQLSchemaConfig {
     @Bean
     public GraphQLSchema schema() {
