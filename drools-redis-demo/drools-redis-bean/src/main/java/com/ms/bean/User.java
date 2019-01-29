@@ -29,7 +29,7 @@ public class User {
     }
 
     public Integer getAge() {
-        return Integer.valueOf(RedisUtil.getRu().get("user:" + id));
+        return Integer.valueOf(RedisUtil.getInstance().get("user:" + id));
     }
 
     public void setAge(Integer age) {

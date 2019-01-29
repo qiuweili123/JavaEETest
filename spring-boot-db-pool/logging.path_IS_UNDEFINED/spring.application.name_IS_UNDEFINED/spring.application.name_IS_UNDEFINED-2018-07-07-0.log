@@ -1,0 +1,654 @@
+[2018-07-07 18:47:35,790][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 7424 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 18:47:35,793][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 18:47:35,923][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 18:47:35 CST 2018]; root of context hierarchy
+[2018-07-07 18:47:39,387][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 18:47:40,758][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3913aba9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 18:47:41,771][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 18:47:42,385][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 18:47:50,157][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 18:47:50,158][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 18:47:50,184][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 18:47:50,184][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 18:47:50,186][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 18:47:50,196][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 18:47:50,197][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 18:47:50,623][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 18:47:51,349][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 18:47:51,946][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 18:47:35 CST 2018]; root of context hierarchy
+[2018-07-07 18:47:52,113][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 18:47:52,114][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 18:47:53,383][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 18:47:53,383][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 18:47:53,460][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 18:47:53,588][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 18:47:53,957][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 20.281 seconds (JVM running for 26.184)
+[2018-07-07 18:47:54,395][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 18:47:35 CST 2018]; root of context hierarchy
+[2018-07-07 18:47:54,414][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 19:39:24,458][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 3312 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 19:39:24,485][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 19:39:24,552][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 19:39:24 CST 2018]; root of context hierarchy
+[2018-07-07 19:39:27,042][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 19:39:27,843][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5f013ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 19:39:28,521][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 19:39:28,871][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 19:39:30,643][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 19:39:30,645][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 19:39:30,650][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 19:39:30,652][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 19:39:30,653][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 19:39:30,663][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 19:39:30,665][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 19:39:31,163][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 19:39:31,692][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:39:32,182][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 19:39:24 CST 2018]; root of context hierarchy
+[2018-07-07 19:39:32,311][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:39:32,312][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:39:33,679][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 19:39:33,679][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 19:39:33,722][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 19:39:33,768][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 19:39:34,048][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 11.177 seconds (JVM running for 14.377)
+[2018-07-07 19:39:34,180][ERROR] o.s.t.c.TestContextManager[250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@33990a0c] to prepare test instance [com.ns.springboothikaricp.RedisUtilTest@7ed7ae]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ns.springboothikaricp.RedisUtilTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.JdkRedisDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:399)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.JdkRedisDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1509)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:506)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:484)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:618)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:177)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318)
+	... 26 common frames omitted
+[2018-07-07 19:39:34,234][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 19:39:24 CST 2018]; root of context hierarchy
+[2018-07-07 19:39:34,243][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 19:41:38,359][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 7932 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 19:41:38,366][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 19:41:38,569][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5a9f4771: startup date [Sat Jul 07 19:41:38 CST 2018]; root of context hierarchy
+[2018-07-07 19:41:40,862][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 19:41:41,948][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80c31bfa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 19:41:43,393][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 19:41:44,158][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 19:41:46,883][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 19:41:46,885][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 19:41:46,894][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 19:41:46,896][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 19:41:46,898][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 19:41:46,910][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 19:41:46,911][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 19:41:47,553][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 19:41:48,059][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:41:48,558][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5a9f4771: startup date [Sat Jul 07 19:41:38 CST 2018]; root of context hierarchy
+[2018-07-07 19:41:48,683][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:41:48,684][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:41:49,878][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 19:41:49,879][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 19:41:49,916][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 19:41:49,976][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 19:41:50,440][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 13.594 seconds (JVM running for 16.127)
+[2018-07-07 19:41:50,555][ERROR] o.s.t.c.TestContextManager[250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@33990a0c] to prepare test instance [com.ns.springboothikaricp.RedisUtilTest@395a573c]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ns.springboothikaricp.RedisUtilTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.JdkRedisDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:399)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.JdkRedisDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1509)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:506)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:484)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:618)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:177)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318)
+	... 26 common frames omitted
+[2018-07-07 19:41:50,640][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@5a9f4771: startup date [Sat Jul 07 19:41:38 CST 2018]; root of context hierarchy
+[2018-07-07 19:41:50,644][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 19:44:07,186][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 8100 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 19:44:07,194][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 19:44:07,255][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 19:44:07 CST 2018]; root of context hierarchy
+[2018-07-07 19:44:09,925][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 19:44:10,674][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$309d99ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 19:44:11,341][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 19:44:11,638][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 19:44:13,468][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 19:44:13,470][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 19:44:13,475][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 19:44:13,477][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 19:44:13,478][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 19:44:13,487][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 19:44:13,488][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 19:44:13,920][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 19:44:14,425][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:44:14,860][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 19:44:07 CST 2018]; root of context hierarchy
+[2018-07-07 19:44:14,973][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:44:14,974][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:44:15,970][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 19:44:15,971][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 19:44:16,021][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 19:44:16,069][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 19:44:16,340][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 10.811 seconds (JVM running for 13.421)
+[2018-07-07 19:44:16,404][ERROR] o.s.t.c.TestContextManager[250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@33990a0c] to prepare test instance [com.ns.springboothikaricp.RedisUtilTest@5d92e8e2]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ns.springboothikaricp.RedisUtilTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.RedisDao' available: expected single matching bean but found 2: jdkRedisDao,stringRedisDao
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:399)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.RedisDao' available: expected single matching bean but found 2: jdkRedisDao,stringRedisDao
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveNotUnique(DependencyDescriptor.java:215)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:506)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:484)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:618)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:177)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318)
+	... 26 common frames omitted
+[2018-07-07 19:44:16,429][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 19:44:07 CST 2018]; root of context hierarchy
+[2018-07-07 19:44:16,433][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 19:45:33,586][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 7048 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 19:45:33,589][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 19:45:33,654][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 19:45:33 CST 2018]; root of context hierarchy
+[2018-07-07 19:45:35,792][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 19:45:36,561][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3458c6f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 19:45:37,156][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 19:45:37,454][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 19:45:39,199][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 19:45:39,201][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 19:45:39,206][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 19:45:39,207][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 19:45:39,208][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 19:45:39,216][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 19:45:39,219][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 19:45:39,638][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 19:45:40,135][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:45:40,571][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 19:45:33 CST 2018]; root of context hierarchy
+[2018-07-07 19:45:40,703][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:45:40,704][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:45:41,683][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 19:45:41,684][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 19:45:41,730][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 19:45:41,780][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 19:45:42,050][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 9.766 seconds (JVM running for 12.638)
+[2018-07-07 19:45:42,125][ERROR] o.s.t.c.TestContextManager[250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@33990a0c] to prepare test instance [com.ns.springboothikaricp.RedisUtilTest@1c2dd89b]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ns.springboothikaricp.RedisUtilTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.RedisDao' available: expected single matching bean but found 2: jdkRedisDao,stringRedisDao
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:399)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.ns.springboothikaricp.dao.RedisDao' available: expected single matching bean but found 2: jdkRedisDao,stringRedisDao
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveNotUnique(DependencyDescriptor.java:215)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:506)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:484)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:618)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:177)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318)
+	... 26 common frames omitted
+[2018-07-07 19:45:42,146][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 19:45:33 CST 2018]; root of context hierarchy
+[2018-07-07 19:45:42,151][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 19:49:25,433][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 12380 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 19:49:25,436][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 19:49:25,559][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@53251a66: startup date [Sat Jul 07 19:49:25 CST 2018]; root of context hierarchy
+[2018-07-07 19:49:28,085][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 19:49:28,812][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$309d99ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 19:49:29,486][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 19:49:29,798][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 19:49:31,627][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 19:49:31,629][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 19:49:31,636][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 19:49:31,637][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 19:49:31,639][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 19:49:31,649][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 19:49:31,651][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 19:49:32,138][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 19:49:32,675][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:49:33,208][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@53251a66: startup date [Sat Jul 07 19:49:25 CST 2018]; root of context hierarchy
+[2018-07-07 19:49:33,351][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:49:33,352][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:49:34,474][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 19:49:34,475][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 19:49:34,521][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 19:49:34,585][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 19:49:34,870][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 11.144 seconds (JVM running for 13.758)
+[2018-07-07 19:49:35,340][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 19:49:35,343][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 19:49:36,040][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@53251a66: startup date [Sat Jul 07 19:49:25 CST 2018]; root of context hierarchy
+[2018-07-07 19:49:36,045][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 19:50:56,704][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 2880 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 19:50:56,708][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 19:50:56,797][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 19:50:56 CST 2018]; root of context hierarchy
+[2018-07-07 19:50:59,464][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 19:51:00,285][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$623fab18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 19:51:00,873][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 19:51:01,172][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 19:51:02,851][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 19:51:02,854][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 19:51:02,858][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 19:51:02,859][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 19:51:02,860][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 19:51:02,869][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 19:51:02,871][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 19:51:03,314][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 19:51:03,788][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:51:04,197][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 19:50:56 CST 2018]; root of context hierarchy
+[2018-07-07 19:51:04,306][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:51:04,308][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 19:51:05,263][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 19:51:05,264][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 19:51:05,316][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 19:51:05,368][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 19:51:05,602][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 10.628 seconds (JVM running for 13.491)
+[2018-07-07 19:51:05,926][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 19:51:05,928][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 19:51:06,767][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 19:50:56 CST 2018]; root of context hierarchy
+[2018-07-07 19:51:06,776][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 21:57:33,224][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 4028 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 21:57:33,259][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 21:57:33,481][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 21:57:33 CST 2018]; root of context hierarchy
+[2018-07-07 21:57:37,483][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 21:57:38,847][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5b0ae3a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 21:57:40,026][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 21:57:40,511][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 21:57:44,054][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 21:57:44,055][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 21:57:44,062][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 21:57:44,063][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 21:57:44,065][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 21:57:44,075][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 21:57:44,077][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 21:57:44,724][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 21:57:45,539][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 21:57:46,327][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 21:57:33 CST 2018]; root of context hierarchy
+[2018-07-07 21:57:46,559][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 21:57:46,560][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 21:57:49,323][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 21:57:49,324][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 21:57:49,449][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 21:57:49,534][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 21:57:50,101][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 19.444 seconds (JVM running for 24.176)
+[2018-07-07 21:57:51,337][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 21:57:51,342][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 21:57:52,117][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 21:57:33 CST 2018]; root of context hierarchy
+[2018-07-07 21:57:52,170][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 21:58:18,484][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 5384 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 21:58:18,488][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 21:58:18,571][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 21:58:18 CST 2018]; root of context hierarchy
+[2018-07-07 21:58:21,141][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 21:58:22,631][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5f013ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 21:58:24,327][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 21:58:25,131][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 21:58:27,892][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 21:58:27,893][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 21:58:27,900][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 21:58:27,902][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 21:58:27,903][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 21:58:27,922][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 21:58:27,923][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 21:58:28,574][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 21:58:29,407][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 21:58:29,958][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 21:58:18 CST 2018]; root of context hierarchy
+[2018-07-07 21:58:30,113][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 21:58:30,113][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 21:58:31,882][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 21:58:31,883][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 21:58:31,924][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 21:58:31,989][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 21:58:32,364][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 15.775 seconds (JVM running for 19.025)
+[2018-07-07 21:58:32,896][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 21:58:32,903][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 21:58:33,623][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 21:58:18 CST 2018]; root of context hierarchy
+[2018-07-07 21:58:33,628][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 22:00:08,395][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 9128 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 22:00:08,398][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 22:00:08,576][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 22:00:08 CST 2018]; root of context hierarchy
+[2018-07-07 22:00:11,540][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 22:00:12,461][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$408dcbc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 22:00:13,101][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 22:00:13,411][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 22:00:15,624][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 22:00:15,628][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 22:00:15,634][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 22:00:15,635][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 22:00:15,637][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 22:00:15,647][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 22:00:15,648][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 22:00:16,114][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 22:00:16,947][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 22:00:17,459][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 22:00:08 CST 2018]; root of context hierarchy
+[2018-07-07 22:00:17,625][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 22:00:17,626][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 22:00:19,291][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 22:00:19,292][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 22:00:19,371][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 22:00:19,438][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 22:00:19,736][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 13.161 seconds (JVM running for 16.154)
+[2018-07-07 22:00:20,269][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 22:00:20,272][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 22:00:21,247][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@352c1b98: startup date [Sat Jul 07 22:00:08 CST 2018]; root of context hierarchy
+[2018-07-07 22:00:21,252][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:13:55,032][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 2172 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:13:55,056][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:13:55,248][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 23:13:55 CST 2018]; root of context hierarchy
+[2018-07-07 23:13:58,902][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:14:00,299][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d31d1e19] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:14:01,442][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:14:02,030][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:14:05,721][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:14:05,723][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:14:05,732][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:14:05,734][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:14:05,735][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:14:05,744][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:14:05,747][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:14:06,357][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:14:07,070][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:14:07,764][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 23:13:55 CST 2018]; root of context hierarchy
+[2018-07-07 23:14:08,006][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:14:08,007][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:14:09,575][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:14:09,577][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:14:09,651][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:14:09,727][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:14:10,102][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 17.748 seconds (JVM running for 23.197)
+[2018-07-07 23:14:10,934][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:14:10,937][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:14:11,868][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 23:13:55 CST 2018]; root of context hierarchy
+[2018-07-07 23:14:11,892][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:20:59,906][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 8048 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:20:59,929][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:21:00,074][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:21:00 CST 2018]; root of context hierarchy
+[2018-07-07 23:21:02,936][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:21:03,904][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6a1a1f06] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:21:04,547][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:21:04,897][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:21:07,551][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:21:07,554][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:21:07,566][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:21:07,568][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:21:07,569][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:21:07,583][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:21:07,585][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:21:08,010][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:21:08,680][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:21:09,388][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:21:00 CST 2018]; root of context hierarchy
+[2018-07-07 23:21:09,521][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:21:09,521][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:21:10,890][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:21:10,891][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:21:10,957][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:21:11,036][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:21:11,523][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 13.162 seconds (JVM running for 16.596)
+[2018-07-07 23:21:12,040][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:21:12,047][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:21:13,289][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:21:00 CST 2018]; root of context hierarchy
+[2018-07-07 23:21:13,296][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:44:42,157][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 12032 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:44:42,162][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:44:42,245][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:44:42 CST 2018]; root of context hierarchy
+[2018-07-07 23:44:46,227][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:44:48,700][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$623fab18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:44:49,506][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:44:49,876][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:44:52,291][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:44:52,293][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:44:52,300][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:44:52,303][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:44:52,304][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:44:52,324][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:44:52,326][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:44:52,788][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:44:53,578][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:44:54,200][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:44:42 CST 2018]; root of context hierarchy
+[2018-07-07 23:44:54,380][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:44:54,382][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:44:55,876][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:44:55,877][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:44:55,991][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:44:56,119][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:44:56,574][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 15.525 seconds (JVM running for 17.985)
+[2018-07-07 23:44:57,547][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:44:57,551][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:44:58,558][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:44:42 CST 2018]; root of context hierarchy
+[2018-07-07 23:44:58,628][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:45:33,713][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 5580 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:45:33,719][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:45:33,910][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:45:33 CST 2018]; root of context hierarchy
+[2018-07-07 23:45:37,032][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:45:38,085][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d0f4df78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:45:38,750][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:45:39,099][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:45:41,491][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:45:41,495][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:45:41,502][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:45:41,504][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:45:41,506][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:45:41,527][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:45:41,530][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:45:42,101][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:45:42,746][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:45:43,302][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:45:33 CST 2018]; root of context hierarchy
+[2018-07-07 23:45:43,452][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:45:43,452][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:45:45,169][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:45:45,170][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:45:45,224][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:45:45,288][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:45:45,611][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 13.451 seconds (JVM running for 16.647)
+[2018-07-07 23:45:46,077][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:45:46,081][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:45:46,981][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:45:33 CST 2018]; root of context hierarchy
+[2018-07-07 23:45:46,987][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:46:49,067][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 1172 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:46:49,070][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:46:49,200][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:46:49 CST 2018]; root of context hierarchy
+[2018-07-07 23:46:51,779][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:46:53,222][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9987d20e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:46:55,355][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:46:55,866][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:46:58,493][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:46:58,498][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:46:58,503][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:46:58,504][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:46:58,505][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:46:58,517][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:46:58,518][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:46:58,974][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:46:59,554][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:47:00,099][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:46:49 CST 2018]; root of context hierarchy
+[2018-07-07 23:47:00,240][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:47:00,241][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:47:01,640][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:47:01,640][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:47:01,687][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:47:01,760][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:47:02,090][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 14.644 seconds (JVM running for 17.816)
+[2018-07-07 23:47:02,519][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:47:02,521][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:47:03,352][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:46:49 CST 2018]; root of context hierarchy
+[2018-07-07 23:47:03,358][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:56:09,392][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 10260 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:56:09,397][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:56:09,622][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 23:56:09 CST 2018]; root of context hierarchy
+[2018-07-07 23:56:12,398][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:56:13,508][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c4eecc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:56:14,290][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:56:14,641][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:56:17,033][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:56:17,035][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:56:17,042][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:56:17,044][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:56:17,046][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:56:17,059][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:56:17,062][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:56:17,534][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:56:18,188][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:56:18,711][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 23:56:09 CST 2018]; root of context hierarchy
+[2018-07-07 23:56:18,851][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:56:18,852][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:56:20,194][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:56:20,195][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:56:20,257][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:56:20,348][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:56:20,850][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 12.976 seconds (JVM running for 16.035)
+[2018-07-07 23:56:21,420][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:56:21,422][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:56:22,620][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@6853425f: startup date [Sat Jul 07 23:56:09 CST 2018]; root of context hierarchy
+[2018-07-07 23:56:22,625][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:56:50,023][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 9604 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:56:50,028][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:56:50,109][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:56:50 CST 2018]; root of context hierarchy
+[2018-07-07 23:56:52,722][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:56:53,565][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d0f4df78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:56:54,181][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:56:54,474][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:56:56,562][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:56:56,564][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:56:56,568][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:56:56,570][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:56:56,571][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:56:56,586][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:56:56,590][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:56:57,013][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:56:57,585][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:56:57,987][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:56:50 CST 2018]; root of context hierarchy
+[2018-07-07 23:56:58,163][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:56:58,164][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:56:59,258][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:56:59,258][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:56:59,333][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:56:59,456][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:56:59,874][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 11.572 seconds (JVM running for 14.806)
+[2018-07-07 23:57:00,401][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:57:00,409][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:57:01,149][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:56:50 CST 2018]; root of context hierarchy
+[2018-07-07 23:57:01,153][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647
+[2018-07-07 23:59:32,510][INFO ] c.n.s.RedisUtilTest[50] - Starting RedisUtilTest on T5BBAYE19HSWXHH with PID 9240 (started by Administrator in E:\privateWorkspace\JavaEETest\spring-boot-db-pool)
+[2018-07-07 23:59:32,520][INFO ] c.n.s.RedisUtilTest[659] - No active profile set, falling back to default profiles: default
+[2018-07-07 23:59:32,591][INFO ] o.s.w.c.s.GenericWebApplicationContext[590] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:59:32 CST 2018]; root of context hierarchy
+[2018-07-07 23:59:34,762][INFO ] o.s.d.r.c.RepositoryConfigurationDelegate[163] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-07-07 23:59:35,486][INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9987d20e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-07-07 23:59:36,120][INFO ] c.z.h.HikariDataSource[80] - HikariPool-1 - Starting...
+[2018-07-07 23:59:36,445][INFO ] c.z.h.HikariDataSource[82] - HikariPool-1 - Start completed.
+[2018-07-07 23:59:38,405][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/getById],methods=[GET]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.getById(long)
+[2018-07-07 23:59:38,408][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/api/user/addUser],methods=[POST]}" onto public java.lang.Object com.ns.springboothikaricp.controller.UserController.addUser(com.ns.springboothikaricp.bean.User)
+[2018-07-07 23:59:38,413][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[2018-07-07 23:59:38,414][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[2018-07-07 23:59:38,415][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[2018-07-07 23:59:38,423][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-07-07 23:59:38,425][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerMapping[547] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-07-07 23:59:38,775][INFO ] s.d.s.w.PropertySourcedRequestMappingHandlerMapping[69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2018-07-07 23:59:39,304][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:59:39,726][INFO ] o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:59:32 CST 2018]; root of context hierarchy
+[2018-07-07 23:59:39,830][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:59:39,831][INFO ] o.s.w.s.h.SimpleUrlHandlerMapping[373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-07-07 23:59:40,840][INFO ] o.s.c.s.DefaultLifecycleProcessor[351] - Starting beans in phase 2147483647
+[2018-07-07 23:59:40,841][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[151] - Context refreshed
+[2018-07-07 23:59:40,879][INFO ] s.d.s.w.p.DocumentationPluginsBootstrapper[154] - Found 1 custom documentation plugin(s)
+[2018-07-07 23:59:40,935][INFO ] s.d.s.w.s.ApiListingReferenceScanner[41] - Scanning for api listing references
+[2018-07-07 23:59:41,188][INFO ] c.n.s.RedisUtilTest[59] - Started RedisUtilTest in 10.373 seconds (JVM running for 12.642)
+[2018-07-07 23:59:41,574][INFO ] i.l.c.EpollProvider[101] - Starting without optional epoll library
+[2018-07-07 23:59:41,577][INFO ] i.l.c.KqueueProvider[101] - Starting without optional kqueue library
+[2018-07-07 23:59:42,270][INFO ] o.s.w.c.s.GenericWebApplicationContext[993] - Closing org.springframework.web.context.support.GenericWebApplicationContext@63eef88a: startup date [Sat Jul 07 23:59:32 CST 2018]; root of context hierarchy
+[2018-07-07 23:59:42,273][INFO ] o.s.c.s.DefaultLifecycleProcessor[366] - Stopping beans in phase 2147483647

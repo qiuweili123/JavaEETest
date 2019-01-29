@@ -1,5 +1,6 @@
 package com.ms.util;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.BinaryClient;
@@ -7,33 +8,39 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
 
 public class RedisUtil {
     private static final Logger LOGGER = LogManager.getLogger(RedisUtil.class);
-    private static JedisPool pool = null;
+
+    private static final String CONFIG_FILE = "conf/redis.properties";
 
     private static RedisUtil ru = new RedisUtil();
 
+    private JedisPool pool = null;
+
+    private Properties config = null;
+
     private RedisUtil() {
         if (pool == null) {
-            String ip = "localhost";
-            int port = 6379;
-            JedisPoolConfig config = new JedisPoolConfig();
-            // 控制一个pool可分配多少个jedis实例，通过pool.getResource()来获取；
-            // 如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个jedis实例，则此时pool的状态为exhausted(耗尽)。
-            config.setMaxTotal(10000);
-            // 控制一个pool最多有多少个状态为idle(空闲的)的jedis实例。
-            config.setMaxIdle(2000);
-            // 表示当borrow(引入)一个jedis实例时，最大的等待时间，如果超过等待时间，则直接抛出JedisConnectionException；
-            config.setMaxWaitMillis(1000 * 100);
-            config.setTestOnBorrow(true);
-
-            pool = new JedisPool(config, ip, port, 100000);
+            loadConfig();
+            String host = PropertiesUtils.getString(config, "redis.host", "localhost");
+            int port = PropertiesUtils.getInt(config, "redis.port", 6379);
+            JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+            jedisPoolConfig.setMaxTotal(100);
+            jedisPoolConfig.setMaxIdle(10);
+            jedisPoolConfig.setMaxWaitMillis(1000 * 100);
+            jedisPoolConfig.setTestOnBorrow(true);
+            pool = new JedisPool(jedisPoolConfig, host, port, 100000);
         }
 
+    }
+
+
+    public static RedisUtil getInstance() {
+        return ru;
     }
 
     /**
@@ -42,18 +49,28 @@ public class RedisUtil {
      * @param pool
      * @param jedis
      */
-    public static void returnResource(JedisPool pool, Jedis jedis) {
+    private void returnResource(JedisPool pool, Jedis jedis) {
         if (jedis != null) {
-            pool.returnResource(jedis);
+            jedis.close();
         }
     }
 
-    public static RedisUtil getRu() {
-        return ru;
-    }
-
-    public static void setRu(RedisUtil ru) {
-        RedisUtil.ru = ru;
+    /**
+     * 加载配置
+     *
+     * @return
+     */
+    private Properties loadConfig() {
+        if (config == null) {
+            config = new Properties();
+            InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(CONFIG_FILE);
+            try {
+                config.load(in);
+            } catch (IOException e) {
+                LOGGER.error("Exception:", e);
+            }
+        }
+        return config;
     }
 
     /**
@@ -69,9 +86,7 @@ public class RedisUtil {
         try {
             jedis = pool.getResource();
             value = jedis.get(key);
-            LOGGER.error("loger get value::" + value);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
         } finally {
             returnResource(pool, jedis);
@@ -93,12 +108,12 @@ public class RedisUtil {
             jedis = pool.getResource();
             return jedis.set(key, value);
         } catch (Exception e) {
-
-            // LOGGER.error(e.getMessage());
-            return "0";
+            LOGGER.error(e.getMessage());
+            return null;
         } finally {
             returnResource(pool, jedis);
         }
+
     }
 
     /**
@@ -113,12 +128,12 @@ public class RedisUtil {
             jedis = pool.getResource();
             return jedis.del(keys);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
             return 0L;
         } finally {
             returnResource(pool, jedis);
         }
+
     }
 
     /**
@@ -135,9 +150,7 @@ public class RedisUtil {
             jedis = pool.getResource();
             res = jedis.append(key, str);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
-            return 0L;
         } finally {
             returnResource(pool, jedis);
         }
@@ -156,7 +169,6 @@ public class RedisUtil {
             jedis = pool.getResource();
             return jedis.exists(key);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
             return false;
         } finally {
@@ -177,7 +189,6 @@ public class RedisUtil {
             jedis = pool.getResource();
             return jedis.setnx(key, value);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
             return 0L;
         } finally {
@@ -537,7 +548,6 @@ public class RedisUtil {
             jedis = pool.getResource();
             res = jedis.hget(key, field);
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
         } finally {
             returnResource(pool, jedis);
@@ -552,19 +562,22 @@ public class RedisUtil {
      * @param fields 可以使 一个String 也可以是 String数组
      * @return
      */
-    public List<String> hmget(String key, String... fields) {
+    public <T> List<T> hmget(Class<T> clazz, String key, String... fields) {
         Jedis jedis = null;
-        List<String> res = null;
+        List<T> resList = null;
         try {
             jedis = pool.getResource();
-            res = jedis.hmget(key, fields);
+            List<String> list = jedis.hmget(key, fields);
+            resList = new ArrayList<T>(list.size());
+            for (String obj : list) {
+                resList.add(JSON.parseObject(obj, clazz));
+            }
         } catch (Exception e) {
-
             LOGGER.error(e.getMessage());
         } finally {
             returnResource(pool, jedis);
         }
-        return res;
+        return resList;
     }
 
     /**

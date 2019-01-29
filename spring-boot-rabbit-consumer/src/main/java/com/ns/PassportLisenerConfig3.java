@@ -13,18 +13,18 @@ import org.springframework.context.annotation.Configuration;
  * Created by lenovo on 2017/9/19.
  */
 
-@Configuration
-@ConfigurationProperties(prefix = "passportConsumer3")
+/*@Configuration
+@ConfigurationProperties(prefix = "passportConsumer3")*/
 public class PassportLisenerConfig3 extends AbsMqListenerConfig {
 
     @Override
-    @Bean("test3")
+    // @Bean("test3")
     public Queue queue() {
         return super.queue();
     }
 
     @Override
-    @Bean("bing3")
+   // @Bean("bing3")
     public Binding binding() {
         return super.binding();
     }

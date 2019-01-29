@@ -38,7 +38,7 @@ public class RestClientTest {
         // listContaners();
         //disposeAndCreateContainer();
         // executeCommands();
-        // executeCommandWithResult();
+          executeCommandWithResult();
         //getRelaseId();
         // getDMNclient();
     }
@@ -115,7 +115,7 @@ public class RestClientTest {
      */
     public static void executeCommandWithResult() {
 
-      /*  Applicant applicant = new Applicant();
+    /*    Applicant applicant = new Applicant();
         applicant.setAge(27);
         applicant.setSex(2);
         applicant.setId(1L);
@@ -123,8 +123,8 @@ public class RestClientTest {
         Recipe recipe = new Recipe();
         recipe.setMedicineId(1L);
         recipe.setApplicantId(1L);
-        recipe.setUseNum(new BigDecimal("2.0"));*/
-
+        recipe.setUseNum(new BigDecimal("2.0"));
+*/
         RuleServicesClient rules = kieServicesClient.getServicesClient(RuleServicesClient.class);
 
         KieCommands cmdFactory = KieServices.Factory.get().getCommands();

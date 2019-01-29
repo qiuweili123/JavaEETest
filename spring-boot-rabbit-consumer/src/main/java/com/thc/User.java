@@ -1,4 +1,4 @@
-package com.ns;
+package com.thc;
 
 import java.io.Serializable;
 
@@ -6,7 +6,6 @@ import java.io.Serializable;
  * Created by lenovo on 2017/9/19.
  */
 public class User implements Serializable {
-
     public User(){
 
     }

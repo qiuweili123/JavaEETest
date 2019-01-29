@@ -33,6 +33,7 @@ public class ThrowExceptionFilter extends ZuulFilter {
         log.info("This is a pre filter, it will throw a RuntimeException");
         RequestContext ctx = RequestContext.getCurrentContext();
         try {
+            //处理异常
             doSomething();
         } catch (Exception e) {
             ctx.set("error.status_code", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

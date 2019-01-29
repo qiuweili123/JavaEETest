@@ -89,6 +89,7 @@ public class UserController {
 
     @GetMapping("/getByUserId")
     public Object getByUserId(String email) {
+
         System.out.println("##email==" + email);
         return email;
     }
@@ -122,6 +123,5 @@ public class UserController {
         APP_LOGGER.info("ql:{}",result);
         return result;
     }
-
 
 }

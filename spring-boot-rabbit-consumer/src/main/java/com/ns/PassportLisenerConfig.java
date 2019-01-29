@@ -8,10 +8,12 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by lenovo on 2017/9/19.
+ *
+ * 自定义listener的实现消费方式
  */
 
-@Configuration
-@ConfigurationProperties(prefix = "passportConsumer")
+//@Configuration
+//@ConfigurationProperties(prefix = "passportConsumer")
 public class PassportLisenerConfig extends AbsMqListenerConfig {
 
     @Bean("autoMessageLisner")

@@ -12,6 +12,8 @@
 
 ### IntelliJ IDEA ###
 .idea
+.mvn
+mvn*
 *.iws
 *.iml
 *.ipr
@@ -19,11 +21,11 @@ out
 gen
 /lib/
 */target/
+
 ### NetBeans ###
 /nbproject/private/
-/build/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-/.mvn/
+/build/
