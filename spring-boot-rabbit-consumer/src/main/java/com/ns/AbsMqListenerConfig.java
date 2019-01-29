@@ -8,6 +8,7 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.ChannelAwareMessageListener;
 import org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistrar;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
 import org.springframework.messaging.handler.annotation.support.DefaultMessageHandlerMethodFactory;
@@ -73,7 +74,8 @@ public abstract class AbsMqListenerConfig extends AbsNsMqConfig implements Rabbi
     // @Bean
     public DefaultMessageHandlerMethodFactory messageHandlerMethodFactory() {
         DefaultMessageHandlerMethodFactory factory = new DefaultMessageHandlerMethodFactory();
-        factory.setMessageConverter(new MappingJackson2MessageConverter());
+
+       // factory.setMessageConverter(new MappingJackson2MessageConverter());
         // System.out.println(connectionFactory);
         return factory;
     }
@@ -100,6 +102,7 @@ public abstract class AbsMqListenerConfig extends AbsNsMqConfig implements Rabbi
         container.setConcurrentConsumers(3);
         container.setAcknowledgeMode(acknowledgeMode);
         container.setMessageListener(getMessageListener());
+        container.setMessageConverter(new Jackson2JsonMessageConverter());
         return container;
     }
 

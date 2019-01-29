@@ -5,6 +5,8 @@ import org.springframework.amqp.core.Message;
 
 /**
  * Created by lenovo on 2017/11/14.
+ *
+ * 自定义listener
  */
 public class AutoMqListener extends AbsMqListener<User> {
 

@@ -7,7 +7,7 @@ spring:
         exchangeName: direct.exchange.test
         exchangeType: direct
         routingKey: orig_2
-    addresses: 127.0.0.1:5672
+    addresses: 127.0.0.1:5671,127.0.0.1:5672
     username: guest
     password: guest
     virtual-host: /

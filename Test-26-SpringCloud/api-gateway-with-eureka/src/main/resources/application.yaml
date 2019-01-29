@@ -11,6 +11,7 @@ zuul:
       path: /api-a/**
       serviceId: eureka-client
 
+
 eureka:
   client:
     serviceUrl:

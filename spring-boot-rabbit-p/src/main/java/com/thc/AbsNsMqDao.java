@@ -18,7 +18,7 @@ public abstract class AbsNsMqDao {
         rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.setExchange(config.getExchangeName());
         rabbitTemplate.setRoutingKey(config.getRoutingKey());
-        rabbitTemplate.setMessageConverter(new Jackson2JsonMessageConverter());
+        //rabbitTemplate.setMessageConverter(new Jackson2JsonMessageConverter());
     }
 
     protected <T> void convertAndSend(T obj) {

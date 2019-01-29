@@ -1,6 +1,7 @@
 package com.didispace.service;
 
 import com.didispace.dto.User;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/refactor")
 public interface HelloService {

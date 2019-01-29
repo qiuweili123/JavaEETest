@@ -1,5 +1,7 @@
 package com.thc;
 
+import org.springframework.amqp.core.*;
+
 import java.util.Map;
 
 /**

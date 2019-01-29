@@ -3,7 +3,7 @@ spring:
   application:
     name: spring-rabbit-c
   rabbitmq:
-    addresses: 127.0.0.1:5672
+    addresses: 127.0.0.1:5671,127.0.0.1:5672
     username: guest
     password: guest
     virtual-host: /
