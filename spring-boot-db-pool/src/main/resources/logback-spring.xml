@@ -89,7 +89,7 @@
 
 
     <!-- 统一日志输出级别，其他appender中如果有高于此处等级设置的也会被输出 -->
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

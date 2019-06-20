@@ -30,7 +30,7 @@ import static graphql.schema.GraphQLObjectType.newObject;
 @RestController
 @RequestMapping(PathConstants.API + "/user")
 
-public class UserController {
+public class UserController extends BaseContoller {
     private static final Logger APP_LOGGER = LoggerFactory.getLogger("app");
 
     @Resource
@@ -50,18 +50,22 @@ public class UserController {
 
         APP_LOGGER.info("sleep end");
         User user;
-        if ((id % 2) == 0) {
-            user = userInfoMapper.selectByEvenUserId(id);
-        } else {
+     try {
+         if ((id % 2) == 0) {
+             user = userInfoMapper.selectByEvenUserId(id);
+         } else {
 
-            user = userInfoMapper.selectByOddUserId(id);
-        }
-        //Optional.ofNullable(user).orElseThrow(()-> new ServiceException("user weikong","001"));
+             user = userInfoMapper.selectByOddUserId(id);
+         }
+         //Optional.ofNullable(user).orElseThrow(()-> new ServiceException("user weikong","001"));
 
-        if (user == null) {
-            throw new ServiceException("user weikong", "001");
+         if (user == null) {
+             throw new ServiceException("user weikong", "001");
+         }
+         return user;
+     } finally {
+         System.out.println("ret end....");
         }
-        return user;
     }
 
     @ApiOperation(value = "添加用户信息", notes = "添加用户信息")

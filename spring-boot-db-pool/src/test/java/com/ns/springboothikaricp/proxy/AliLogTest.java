@@ -10,7 +10,7 @@ import com.aliyun.openservices.log.response.GetLogsResponse;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import com.ns.springboothikaricp.ApplicationTests;
-import com.ns.springboothikaricp.bean.AliLog2;
+//import com.ns.springboothikaricp.bean.AliLog2;
 import com.ns.springboothikaricp.client.AliLog;
 import org.junit.Test;
 
