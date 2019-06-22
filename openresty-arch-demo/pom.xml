@@ -14,7 +14,7 @@
             <id>dev</id>
             <properties>
                 <profiles.active>dev</profiles.active>
-                <openresty.home>D:\j2eetool\openresty-1.15.8.1</openresty.home>
+                <openresty.home>D:\j2eetool\openresty</openresty.home>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
