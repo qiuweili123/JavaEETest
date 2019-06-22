@@ -1,0 +1,14 @@
+map $api_resp_code  $api_resp_msg {
+    "0" "SUCCESS";
+    "-10000" "参数不可为空。";
+    "-1" "请求失败。";
+    "-5" "禁止访问。";
+    "-6" "访问频率过快,请稍后再试。";
+    "-10201" "未定义路径。";
+    "-1006" "参数格式异常。";
+    "-1013" "目前仅支持POST请求方式。";
+}
+
+map $project_code $project_name{
+     "01"  openresty-arch-demo;
+}
