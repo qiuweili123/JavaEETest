@@ -1,3 +1,0 @@
-org\apache\skywalking\apm\collector\analysis\alarm\define\graph\AlarmGraphIdDefine.class
-org\apache\skywalking\apm\collector\analysis\alarm\define\graph\AlarmWorkerIdDefine.class
-org\apache\skywalking\apm\collector\analysis\alarm\define\AnalysisAlarmModule.class
