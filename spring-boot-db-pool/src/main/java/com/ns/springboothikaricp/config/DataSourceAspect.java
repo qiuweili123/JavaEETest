@@ -73,7 +73,7 @@ public class DataSourceAspect {
     }
 
 
-    //执行完切面后，将线程共享中的数据源名称清空
+    //执行完切面后，将线程共享中的数据源名称清空,一定要注意清除的时候要做判断
     @After("@annotation(targetDataSource)")
     public void after(JoinPoint joinPoint, TargetDataSource targetDataSource) {
 

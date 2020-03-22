@@ -124,11 +124,17 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
-<!--        <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.2.1.RELEASE</version>
-        </dependency>-->
+        <dependency>
+            <groupId>biz.paluch.redis</groupId>
+            <artifactId>lettuce</artifactId>
+            <version>5.0.0.Beta1</version>
+        </dependency>
+
+        <!--        <dependency>
+                    <groupId>com.alibaba.boot</groupId>
+                    <artifactId>dubbo-spring-boot-starter</artifactId>
+                    <version>0.2.1.RELEASE</version>
+                </dependency>-->
 <!--
 
         <dependency>

@@ -78,4 +78,5 @@ public class RedisConfig {
 
         return redisMessageListenerContainer;
     }
+
 }

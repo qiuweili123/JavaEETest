@@ -1,4 +1,4 @@
 package com.ns.mustache;
 
-public class CodeGenTest {
+public class CodeGenTest  {
 }

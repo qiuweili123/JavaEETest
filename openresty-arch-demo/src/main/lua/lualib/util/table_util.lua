@@ -6,7 +6,6 @@ local mt = { __index = _M }
 
 -- 向table末尾追加元素
 function _M.apend(t, ...)
-    print("type", type(t))
     for i = 1, select("#", ...) do
         local v = select(i, ...);
         table.insert(t, v);
