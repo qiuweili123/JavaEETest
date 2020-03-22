@@ -1,0 +1,7 @@
+E:\privateWorkspace\JavaEETest\incubator-skywalking\apm-collector\apm-collector-analysis\analysis-jvm\jvm-define\src\main\java\org\apache\skywalking\apm\collector\analysis\jvm\define\service\IMemoryPoolMetricService.java
+E:\privateWorkspace\JavaEETest\incubator-skywalking\apm-collector\apm-collector-analysis\analysis-jvm\jvm-define\src\main\java\org\apache\skywalking\apm\collector\analysis\jvm\define\graph\WorkerIdDefine.java
+E:\privateWorkspace\JavaEETest\incubator-skywalking\apm-collector\apm-collector-analysis\analysis-jvm\jvm-define\src\main\java\org\apache\skywalking\apm\collector\analysis\jvm\define\AnalysisJVMModule.java
+E:\privateWorkspace\JavaEETest\incubator-skywalking\apm-collector\apm-collector-analysis\analysis-jvm\jvm-define\src\main\java\org\apache\skywalking\apm\collector\analysis\jvm\define\service\IMemoryMetricService.java
+E:\privateWorkspace\JavaEETest\incubator-skywalking\apm-collector\apm-collector-analysis\analysis-jvm\jvm-define\src\main\java\org\apache\skywalking\apm\collector\analysis\jvm\define\graph\GraphIdDefine.java
+E:\privateWorkspace\JavaEETest\incubator-skywalking\apm-collector\apm-collector-analysis\analysis-jvm\jvm-define\src\main\java\org\apache\skywalking\apm\collector\analysis\jvm\define\service\IGCMetricService.java
+E:\privateWorkspace\JavaEETest\incubator-skywalking\apm-collector\apm-collector-analysis\analysis-jvm\jvm-define\src\main\java\org\apache\skywalking\apm\collector\analysis\jvm\define\service\ICpuMetricService.java

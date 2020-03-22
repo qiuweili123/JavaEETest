@@ -1,0 +1,7 @@
+org\apache\skywalking\apm\collector\analysis\jvm\define\graph\WorkerIdDefine.class
+org\apache\skywalking\apm\collector\analysis\jvm\define\AnalysisJVMModule.class
+org\apache\skywalking\apm\collector\analysis\jvm\define\graph\GraphIdDefine.class
+org\apache\skywalking\apm\collector\analysis\jvm\define\service\ICpuMetricService.class
+org\apache\skywalking\apm\collector\analysis\jvm\define\service\IGCMetricService.class
+org\apache\skywalking\apm\collector\analysis\jvm\define\service\IMemoryMetricService.class
+org\apache\skywalking\apm\collector\analysis\jvm\define\service\IMemoryPoolMetricService.class

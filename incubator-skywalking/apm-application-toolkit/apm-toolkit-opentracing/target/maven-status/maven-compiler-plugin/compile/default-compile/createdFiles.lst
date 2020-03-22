@@ -1,0 +1,10 @@
+org\apache\skywalking\apm\toolkit\opentracing\SkywalkingTracer.class
+org\apache\skywalking\apm\toolkit\opentracing\NeedSnifferActivation.class
+org\apache\skywalking\apm\toolkit\opentracing\Tag.class
+org\apache\skywalking\apm\toolkit\opentracing\SkywalkingSpanBuilder.class
+org\apache\skywalking\apm\toolkit\opentracing\ByteBufferContext.class
+org\apache\skywalking\apm\toolkit\opentracing\SkywalkingContext.class
+org\apache\skywalking\apm\toolkit\opentracing\SkywalkingContinuation.class
+org\apache\skywalking\apm\toolkit\opentracing\TextMapContext.class
+org\apache\skywalking\apm\toolkit\opentracing\SkywalkingActiveSpan.class
+org\apache\skywalking\apm\toolkit\opentracing\SkywalkingSpan.class

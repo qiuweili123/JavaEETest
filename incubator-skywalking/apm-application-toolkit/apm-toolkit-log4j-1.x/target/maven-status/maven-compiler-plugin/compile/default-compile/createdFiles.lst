@@ -1,0 +1,3 @@
+org\apache\skywalking\apm\toolkit\log\log4j\v1\x\TraceIdPatternParser.class
+org\apache\skywalking\apm\toolkit\log\log4j\v1\x\TraceIdPatternLayout.class
+org\apache\skywalking\apm\toolkit\log\log4j\v1\x\TraceIdPatternConverter.class

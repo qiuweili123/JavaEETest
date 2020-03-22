@@ -1,0 +1,133 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.secoo.mall</groupId>
+        <artifactId>matrix</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.ns</groupId>
+    <artifactId>dubbo-demo</artifactId>
+    <version>1.0.1</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>The demo module of dubbo project</description>
+    <properties>
+        <skip_maven_deploy>true</skip_maven_deploy>
+    </properties>
+    <modules>
+        <module>dubbo-demo-interface</module>
+        <module>dubbo-demo-provider</module>
+        <module>dubbo-demo-consumer</module>
+    </modules>
+
+    <dependencyManagement>
+         <dependencies>
+
+            <!-- <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-dependencies</artifactId>
+                    <version>2.1.5.RELEASE</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+                </dependency>
+          <dependency>
+                 <groupId>org.apache.dubbo</groupId>
+                 <artifactId>dubbo-dependencies-bom</artifactId>
+                 <version>2.7.2</version>
+                 <type>pom</type>
+                 <scope>import</scope>
+             </dependency>-->
+             <!--   <dependency>
+                 <groupId>org.apache.dubbo</groupId>
+                 <artifactId>dubbo</artifactId>
+                 <version>2.7.2</version>
+                 <exclusions>
+                     <exclusion>
+                         <groupId>org.springframework</groupId>
+                         <artifactId>spring</artifactId>
+                     </exclusion>
+                     <exclusion>
+                         <groupId>javax.servlet</groupId>
+                         <artifactId>servlet-api</artifactId>
+                     </exclusion>
+                     <exclusion>
+                         <groupId>log4j</groupId>
+                         <artifactId>log4j</artifactId>
+                     </exclusion>
+                 </exclusions>
+             </dependency>-->
+       </dependencies>
+        <!-- <dependencies>
+             <dependency>
+                 <groupId>com.ns</groupId>
+                 <artifactId>dubbo-demo</artifactId>
+                 <version>1.0.1</version>
+             </dependency>
+         </dependencies>-->
+    </dependencyManagement>
+    <dependencies>
+        <!-- Spring Boot dependencies -->
+
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.deepoove</groupId>
+            <artifactId>swagger-dubbo-project</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.20</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.secoo.mall</groupId>
+            <artifactId>protocol-starter</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>nacos-config-spring-boot-starter</artifactId>
+            <version>0.2.1</version>
+        </dependency>
+
+        <!--      <dependency>
+                  <groupId>com.secoo.mall</groupId>
+                  <artifactId>common-util</artifactId>
+              </dependency>
+              <dependency>
+                  <groupId>com.secoo.mall</groupId>
+                  <artifactId>protocol-starter</artifactId>
+              </dependency>-->
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

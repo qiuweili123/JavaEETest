@@ -1,0 +1,2 @@
+org\apache\skywalking\apm\collector\analysis\baseline\computing\provider\AnalysisBaselineComputingModuleProvider.class
+org\apache\skywalking\apm\collector\analysis\baseline\computing\provider\AnalysisBaselineComputingModuleConfig.class
