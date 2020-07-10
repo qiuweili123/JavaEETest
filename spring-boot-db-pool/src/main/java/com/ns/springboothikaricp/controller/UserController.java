@@ -1,5 +1,6 @@
 package com.ns.springboothikaricp.controller;
 
+import com.ishansong.ops.rinet.client.RiskClient;
 import com.ns.common.ServiceException;
 import com.ns.springboothikaricp.bean.User;
 import com.ns.springboothikaricp.constants.PathConstants;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static graphql.Scalars.GraphQLInt;
@@ -31,7 +33,8 @@ import static graphql.schema.GraphQLObjectType.newObject;
 @RequestMapping(PathConstants.API + "/user")
 
 public class UserController extends BaseContoller {
-    private static final Logger APP_LOGGER = LoggerFactory.getLogger("app");
+    private static final Logger APP_LOGGER = LoggerFactory.getLogger("risk");
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
     @Resource
     private UserInfoMapper userInfoMapper;
@@ -44,11 +47,17 @@ public class UserController extends BaseContoller {
     @RequestMapping("/getById")
     public Object getById(long id) {
         //userDao.getName();
-        System.out.println("##tmp::" + System.getProperty("java.io.tmpdir"));
 
+        System.out.println("##tmp::" + System.getProperty("java.io.tmpdir"));
+        LOGGER.info("sdsd");
         APP_LOGGER.info("id=4444===44=" + (id % 2));
 
-        APP_LOGGER.info("sleep end");
+        RiskClient riskClient=new RiskClient();
+       // APP_LOGGER.info("");
+        Map map=new HashMap();
+        map.put("key","201908929");
+         riskClient.finish("201908929");
+
         User user;
      try {
          if ((id % 2) == 0) {

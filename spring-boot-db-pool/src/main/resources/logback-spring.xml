@@ -2,15 +2,20 @@
 <!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd"> -->
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
-    <!-- <property name="LOG_HOME" value="./log" /> -->
+  <!--   <property name="LOG_HOME" value="/Users/liqiuwei/logs" />-->
 
     <!--取得spring boot中的变量值有2种方式，一种是resource,另外一种是使用springProperty，使用springProperty好处能指定默认值-->
     <!-- <property resource="application.properties"/>
  -->
 
-    <springProperty scope="context" name="logName" source="spring.application.name" defaultValue="app"/>
-    <springProperty scope="context" name="logPath" source="logging.path" defaultValue="${java.io.tmpdir}"/>
+    <!--将风控日志打印到应用日志目录的子目录下-->
+    <springProperty scope="context" name="appName" source="spring.application.name" defaultValue="app"/>
 
+    <springProperty scope="context" name="logName" source="spring.application.name" defaultValue="app"/>
+    <springProperty scope="context" name="logPath" source="logging.path" defaultValue="${user.home}"/>
+    <springProperty scope="context" name="logHome" source="logging.path" defaultValue="${user.home}"/>
+
+    <include resource="risk-log-config.xml"/>
 
     <property name="PATTERN" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>
 
@@ -89,7 +94,7 @@
 
 
     <!-- 统一日志输出级别，其他appender中如果有高于此处等级设置的也会被输出 -->
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
