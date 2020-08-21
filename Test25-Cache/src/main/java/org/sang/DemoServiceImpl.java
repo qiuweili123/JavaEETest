@@ -3,8 +3,9 @@ package org.sang;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * Created by sang on 17-1-6.
@@ -13,6 +14,9 @@ import org.springframework.stereotype.Service;
 public class DemoServiceImpl implements DemoService {
     @Autowired
     PersonRepository personRepository;
+
+    @Resource
+    private PersonCacheManager personCacheManager;
 
     /**
      * 插入 或者更新
@@ -43,11 +47,14 @@ public class DemoServiceImpl implements DemoService {
      * 并且将缓存的数据存入到 guavaDemo里面
      * 其中key 为 #id+dataMap
      */
-    @Cacheable(value = "people", key = "#person.id")
+    //@Cacheable(value = "people", key = "#person.id")
     @Override
     public Person findOne(Person person) {
-        Person p = personRepository.findOne(person.getId());
+        System.out.println("从db中获取数据");
+        Person p = personCacheManager.findOneById(person);
         System.out.println("为id、key为" + p.getId() + "数据做了缓存");
         return p;
     }
+
+
 }
