@@ -1,0 +1,30 @@
+<included>
+
+    <property name="riskLogPattern"
+              value="{&quot;date&quot;:&quot;%date{yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS}&quot;,&quot;level&quot;:&quot;%level&quot;,&quot;appName&quot;:&quot;${appName}&quot;,&quot;class&quot;:&quot;%class&quot;,&quot;method&quot;:&quot;%method&quot;,&quot;line&quot;:&quot;%line&quot;,&quot;message&quot;:&quot;%replace(%msg){&apos;&quot;&apos;, &apos;`&apos;} %ex&quot;}%n"/>
+
+
+    <appender name="RISK2" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 定义文件的名称 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 设置达到指定大小限制后输出的日志名称 -->
+            <fileNamePattern>${logHome}/risk/risk2.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${riskLogPattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ASYN_RISK2" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="RISK"/>
+        <queueSize>1024</queueSize>
+        <neverBlock>true</neverBlock>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <logger name="risk2" level="info">
+        <appender-ref ref="ASYN_RISK"/>
+    </logger>
+
+</included>

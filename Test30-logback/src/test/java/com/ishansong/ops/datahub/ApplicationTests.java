@@ -1,21 +1,20 @@
-package org.sang;
+package com.ishansong.ops.datahub;
+
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.sang.ods.Application;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
-
 @RunWith(SpringRunner.class)
-@SpringBootTest
-public class Test25CacheApplicationTests {
-    @Resource
-    private DemoService demoService;
-
+@SpringBootTest(classes = Application.class)
+@ActiveProfiles("DS")
+public class ApplicationTests {
     @Test
     public void contextLoads() {
-        System.out.println("demo==" + demoService);
+
     }
 
 }

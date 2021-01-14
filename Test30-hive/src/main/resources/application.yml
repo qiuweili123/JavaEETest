@@ -1,0 +1,49 @@
+app:
+  id: datahub-data-sync
+apollo:
+  #bootstrap:
+    #enabled: true
+    # 添加 application的配置
+    #namespaces: application
+  meta: http://192.168.10.56:8080
+  cacheDir: ../apollo/cache
+spring:
+  application:
+    name: datahub-data-sync
+  datasource:
+    druid:
+      sinksync:
+        type: com.alibaba.druid.pool.DruidDataSource
+       # url: jdbc:p6spy:mysql://192.168.20.34:3306/wormhole?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=true&rewriteBatchedStatements=true
+        url: jdbc:mysql://192.168.20.34:3306/datahub?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=true&rewriteBatchedStatements=true
+        username: wormhole_rw
+        password: 042D_3059090@A7
+        initialSize: 2
+        minIdle: 5
+        maxIdle: 5
+        maxActive: 50
+        maxWait: 10000
+        keep-alive: true
+      ods:
+        url: jdbc:hive2://192.168.10.7:10000/test1
+        #url: jdbc:p6spy:hive2://192.168.10.7:10000/test1
+        type: com.alibaba.druid.pool.DruidDataSource
+        username: hdfs
+        password:
+        #driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+        driver-class-name: org.apache.hive.jdbc.ext.HiveDriverExt
+        initialSize: 2
+        minIdle: 5
+        maxIdle: 5
+        maxActive: 50
+        maxWait: 10000
+        keep-alive: true
+  cache:
+    type: caffeine
+  redis:
+    lettuce:
+      pool:
+        max-wait:
+decorator:
+  datasource:
+    enabled: true

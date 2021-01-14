@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <springProperty scope="context" name="appName" source="appName" defaultValue="datahub-data-sync"/>
+    <springProperty scope="context" name="logLevel" source="logLevel" defaultValue="INFO"/>
+    <springProperty scope="context" name="logHome" source="logHome" defaultValue="c:/logs/"/>
+    <springProperty scope="context" name="logRef" source="logRef" defaultValue="default"/>
+    <!--    <conversionRule conversionWord="traceId" converterClass="com.ishansong.log.convert.TraceIdConvert" />
+        <conversionRule conversionWord="sequenceId" converterClass="com.ishansong.log.convert.SequenceIdConvert" />-->
+    <!--<property name="logpattern" value="{&quot;date&quot;:&quot;%date{yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS}&quot;,&quot;traceId&quot;:&quot;%traceId&quot;,&quot;sequenceId&quot;:&quot;%sequenceId&quot;,&quot;level&quot;:&quot;%level&quot;,&quot;appName&quot;:&quot;${appName}&quot;,&quot;class&quot;:&quot;%class&quot;,&quot;method&quot;:&quot;%method&quot;,&quot;line&quot;:&quot;%line&quot;,&quot;message&quot;:%msg}%n" />
+    -->
+
+    <include resource="risk-log-config.xml"/>
+
+    <property name="deflogpattern"
+              value="{&quot;date&quot;:&quot;%date{yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS}&quot;,&quot;level&quot;:&quot;%level&quot;,&quot;appName&quot;:&quot;${appName}&quot;,&quot;class&quot;:&quot;%class&quot;,&quot;method&quot;:&quot;%method&quot;,&quot;line&quot;:&quot;%line&quot;,&quot;message&quot;:&quot;%replace(%msg){&apos;&quot;&apos;, &apos;`&apos;} %ex&quot;}%n"/>
+
+
+
+    <appender name="default" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logHome}/default.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${deflogpattern}</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+    </appender>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger.%method:%line - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="${logLevel}">
+        <appender-ref ref="${logRef}"/>
+        <springProfile name="ds,local">
+            <appender-ref ref="console"/>
+        </springProfile>
+    </root>
+
+</configuration>
