@@ -5,7 +5,7 @@
     <title>${displayName}</title>
 </head>
 <body>
-<%--<%@include file="comm/top.jsp" %>--%>
+<%--<%@include data="comm/top.jsp" %>--%>
 <jsp:include page="comm/top.jsp"/>
 <div class="container">
     <c:forEach var="article" items="${articles}">

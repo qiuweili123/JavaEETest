@@ -1,0 +1,15 @@
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 30
+        read-timeout: 20
+
+  httpclient:
+    enabled: true
+server:
+  port: 9091
+
+spring:
+  profiles:
+    active:

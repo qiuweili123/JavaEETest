@@ -121,7 +121,7 @@ public class LogbackExtLoggingSystem extends Slf4JLoggingSystem {
         context.putProperty(LoggingSystemProperties.LOG_DATEFORMAT_PATTERN, environment.resolvePlaceholders(
                 "${logging.pattern.dateformat:${LOG_DATEFORMAT_PATTERN:yyyy-MM-dd HH:mm:ss.SSS}}"));
         context.putProperty(LoggingSystemProperties.ROLLING_FILE_NAME_PATTERN, environment
-                .resolvePlaceholders("${logging.pattern.rolling-file-name:${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz}"));
+                .resolvePlaceholders("${logging.pattern.rolling-data-name:${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz}"));
         new DefaultLogbackConfiguration(initializationContext, logFile).apply(configurator);
         context.setPackagingDataEnabled(true);
     }

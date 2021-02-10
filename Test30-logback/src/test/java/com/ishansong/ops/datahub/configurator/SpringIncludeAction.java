@@ -92,7 +92,7 @@ public class SpringIncludeAction extends Action {
             addError("One of \"path\", \"resource\" or \"url\" attributes must be set.");
             return false;
         } else if (count > 1) {
-            addError("Only one of \"file\", \"url\" or \"resource\" attributes should be set.");
+            addError("Only one of \"data\", \"url\" or \"resource\" attributes should be set.");
             return false;
         } else if (count == 1) {
             return true;

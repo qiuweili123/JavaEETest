@@ -36,7 +36,7 @@
     </environments>
     <!--<package name="org.sang.db"/>-->
     <!--<mapper class="org.UserMapper"/>-->
-    <!--<mapper url="file:///home/sang/workspace/JavaEE/Test27-mybatis4/src/main/resources/userMapper.xml"/>-->
+    <!--<mapper url="data:///home/sang/workspace/JavaEE/Test27-mybatis4/src/main/resources/userMapper.xml"/>-->
     <mappers>
         <mapper resource="userMapper.xml"/>
     </mappers>

@@ -1,6 +1,7 @@
 package org.sang;
 
 import com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer;
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 import org.sang.bean.Person;
 import org.sang.util.RedisUtil;
@@ -28,7 +29,7 @@ public class RedisTemplateTest extends ApplicationTests {
         redisTemplate.setHashKeySerializer( new StringRedisSerializer());
         redisTemplate.opsForHash().putAll(key,map);
 
-        redisTemplate.opsForValue().set("string",012L);
+       // redisTemplate.opsForValue().set("string",12);
     }
 
     @Test
@@ -47,9 +48,6 @@ public class RedisTemplateTest extends ApplicationTests {
         List<Long> longs = operations.multiGet(key,list);
         System.out.println("longs=="+longs);
     }
-    @Test
-    public void testSetSortList(){
 
 
-    }
 }

@@ -9,7 +9,7 @@
     <link href="<%=contextPath%>/static/mycss.css" rel="stylesheet"/>
 </head>
 <body>
-<%--<%@include file="comm/top.jsp" %>--%>
+<%--<%@include data="comm/top.jsp" %>--%>
 <jsp:include page="comm/top.jsp"/>
 
 <c:forEach var="article" items="${articles}" begin="0" step="1">

@@ -41,7 +41,7 @@
             <defaultValue>logback</defaultValue>
         </discriminator>
         <sift>
-            <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <appender name="data" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <fileNamePattern>${logHome}/test.${logFileName}.%d{yyyy-MM-dd}.log</fileNamePattern>-
                 &lt;!&ndash;  <fileNamePattern>${logHome}/test.${port}.%d{yyyy-MM-dd}.log</fileNamePattern>&ndash;&gt;

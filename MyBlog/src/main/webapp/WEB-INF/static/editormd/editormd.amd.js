@@ -1,7 +1,7 @@
 /*
  * Editor.md
  *
- * @file        editormd.amd.js 
+ * @data        editormd.amd.js
  * @version     v1.5.0 
  * @description Open source online markdown editor.
  * @license     MIT License
@@ -166,7 +166,7 @@
         appendMarkdown: "",             // if in init textarea value not empty, append markdown to textarea
         width: "100%",
         height: "100%",
-        path: "./lib/",       // Dependents module file directory
+        path: "./lib/",       // Dependents module data directory
         pluginPath: "",             // If this empty, default use settings.path + "../plugins/"
         delay: 300,            // Delay parse markdown to html, Uint : ms
         autoLoadModules: true,           // Automatic load dependent module files
@@ -283,8 +283,8 @@
             "reference-link": "fa-anchor",
             image: "fa-picture-o",
             code: "fa-code",
-            "preformatted-text": "fa-file-code-o",
-            "code-block": "fa-file-code-o",
+            "preformatted-text": "fa-data-code-o",
+            "code-block": "fa-data-code-o",
             table: "fa-table",
             datetime: "fa-clock-o",
             emoji: "fa-smile-o",
@@ -3965,7 +3965,7 @@
 
     /**
      * 动态加载CSS文件的方法
-     * Load css file method
+     * Load css data method
      *
      * @param {String}   fileName              CSS文件名
      * @param {Function} [callback=function()] 加载成功后执行的回调函数
@@ -3999,7 +3999,7 @@
 
     /**
      * 动态加载JS文件的方法
-     * Load javascript file method
+     * Load javascript data method
      *
      * @param {String}   fileName              JS文件名
      * @param {Function} [callback=function()] 加载成功后执行的回调函数

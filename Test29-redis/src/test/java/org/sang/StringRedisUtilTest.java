@@ -14,8 +14,7 @@ public class StringRedisUtilTest extends ApplicationTests {
     public void setAndInc() {
         String key = "intKey01";
         stringRedisUtil.set(key, 100);
-        stringRedisUtil.incr(key, 1);
-        System.out.println("" + stringRedisUtil.get(key,Integer.class));
+
         //System.out.println(redisDao.incr(key,10)+"##get ddd ::"+redisDao.get(key,Integer.class));
     }
 

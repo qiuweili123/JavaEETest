@@ -22,12 +22,12 @@ public class PropertyAction extends Action {
 
     static final String RESOURCE_ATTRIBUTE = "resource";
 
-    static String INVALID_ATTRIBUTES = "In <property> element, either the \"file\" attribute alone, or "
+    static String INVALID_ATTRIBUTES = "In <property> element, either the \"data\" attribute alone, or "
                     + "the \"resource\" element alone, or both the \"name\" and \"value\" attributes must be set.";
 
     /**
      * Set a new property for the execution context by name, value pair, or adds
-     * all the properties found in the given file.
+     * all the properties found in the given data.
      * 
      */
     public void begin(InterpretationContext ec, String localName, Attributes attributes) {
@@ -49,9 +49,9 @@ public class PropertyAction extends Action {
                 FileInputStream istream = new FileInputStream(file);
                 loadAndSetProperties(ec, istream, scope);
             } catch (FileNotFoundException e) {
-                addError("Could not find properties file [" + file + "].");
+                addError("Could not find properties data [" + file + "].");
             } catch (IOException e1) {
-                addError("Could not read properties file [" + file + "].", e1);
+                addError("Could not read properties data [" + file + "].", e1);
             }
         } else if (checkResourceAttributeSanity(attributes)) {
             String resource = attributes.getValue(RESOURCE_ATTRIBUTE);
@@ -64,7 +64,7 @@ public class PropertyAction extends Action {
                     InputStream istream = resourceURL.openStream();
                     loadAndSetProperties(ec, istream, scope);
                 } catch (IOException e) {
-                    addError("Could not read resource file [" + resource + "].", e);
+                    addError("Could not read resource data [" + resource + "].", e);
                 }
             }
         } else if (checkValueNameAttributesSanity(attributes)) {

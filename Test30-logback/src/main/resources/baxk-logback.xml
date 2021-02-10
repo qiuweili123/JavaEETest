@@ -22,13 +22,13 @@
             <defaultValue>logback</defaultValue>
         </discriminator>
         <sift>
-            <!-- A standard RollingFileAppender, the log file is based on 'logFileName' at runtime  -->
+            <!-- A standard RollingFileAppender, the log data is based on 'logFileName' at runtime  -->
             <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
                 <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <fileNamePattern>c:/logs/test.${logFileName}.%d{yyyy-MM-dd}.log</fileNamePattern>
                 </rollingPolicy>
 
-               <!-- <file>c:/logs/${logFileName}.%d{yyyy-MM-dd}.log</file>-->
+               <!-- <data>c:/logs/${logFileName}.%d{yyyy-MM-dd}.log</data>-->
                 <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
                     <Pattern>
                         %d{yyyy-MM-dd HH:mm:ss.SSS} %mdc [%thread] %-5level %logger{36} - %msg%n

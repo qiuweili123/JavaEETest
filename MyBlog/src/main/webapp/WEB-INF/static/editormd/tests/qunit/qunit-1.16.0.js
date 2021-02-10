@@ -160,7 +160,7 @@
 // Initialize more QUnit.config and QUnit.urlParams
     (function () {
         var i, current,
-            location = window.location || {search: "", protocol: "file:"},
+            location = window.location || {search: "", protocol: "data:"},
             params = location.search.slice(1).split("&"),
             length = params.length,
             urlParams = {};
@@ -196,7 +196,7 @@
         }
 
         // Figure out if we're running the tests from a server or not
-        QUnit.isLocal = location.protocol === "file:";
+        QUnit.isLocal = location.protocol === "data:";
     }());
 
 // Root QUnit object.
@@ -2645,7 +2645,7 @@ QUnit.diff = (function () {
         if (config.altertitle && defined.document && document.title) {
 
             // show ✖ for good, ✔ for bad suite result in title
-            // use escape sequences in case file gets loaded with non-utf-8-charset
+            // use escape sequences in case data gets loaded with non-utf-8-charset
             document.title = [
                 (details.failed ? "\u2716" : "\u2714"),
                 document.title.replace(/^[\u2714\u2716] /i, "")
